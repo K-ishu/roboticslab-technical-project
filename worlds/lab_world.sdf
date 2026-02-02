@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="lab_world">
+
+    <!-- نور (بدون include) -->
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+    <!-- زمین (بدون include) -->
+    <model name="ground">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 50</size>
+            </plane>
+          </geometry>
+        </collision>
+
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 50</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ================= Brick Wall LEFT ================= -->
+<model name="brick_wall_left">
+  <static>true</static>
+  <pose>2.1 -2 0.75 0 0 0</pose>
+  <link name="wall_link">
+
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>0.2 4.0 1.5</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.2 4.0 1.5</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.65 0.32 0.22 1</ambient>
+        <diffuse>0.75 0.38 0.26 1</diffuse>
+      </material>
+    </visual>
+
+  </link>
+</model>
+<!-- ================= Brick Wall RIGHT ================= -->
+<model name="brick_wall_right">
+  <static>true</static>
+<pose>0 0 0.75 0 0 1.5708</pose>
+
+  <link name="wall_link">
+
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>0.2 4.0 1.5</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.2 4.0 1.5</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.65 0.32 0.22 1</ambient>
+        <diffuse>0.75 0.38 0.26 1</diffuse>
+      </material>
+    </visual>
+
+  </link>
+</model>
+      <!-- ربات: از مدل موجود خودت -->
+    <include>
+      <uri>file:///home/kishu/roboticslab-technical-project/models/simple_diff_bot</uri>
+      <name>mobile_bot</name>
+      <pose>1.1 -0.9 0.10 0 0 0</pose>
+    </include>
+<!-- ================= Industrial arm (separate) ================= -->
+<include>
+  <uri>file:///home/kishu/roboticslab-technical-project/models/industrial_arm</uri>
+  <name>industrial_arm</name>
+  <!-- بذارش کنار ربات که تداخل نداشته باشه -->
+<pose>1.4 -0.3 0.05 0 0 0</pose>
+ 
+</include>
+  </world>
+</sdf>
+
