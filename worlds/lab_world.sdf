@@ -102,20 +102,158 @@
 
   </link>
 </model>
-      <!-- ربات: از مدل موجود خودت -->
-    <include>
-      <uri>file:///home/kishu/roboticslab-technical-project/models/simple_diff_bot</uri>
-      <name>mobile_bot</name>
-      <pose>1.1 -0.9 0.10 0 0 0</pose>
-    </include>
-<!-- ================= Industrial arm (separate) ================= -->
+<!-- ================= Target Object ================= -->
+<model name="target_box">
+  <static>false</static>
+
+  <!-- موقعیت شیء داخل محدوده دیوار -->
+  <pose>0.2 -0.7 0.1 0 0 0</pose>
+
+  <link name="box_link">
+
+    <inertial>
+      <mass>1.0</mass>
+      <inertia>
+        <ixx>0.01</ixx>
+        <iyy>0.01</iyy>
+        <izz>0.01</izz>
+      </inertia>
+    </inertial>
+
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>0.2 0.2 0.2</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.2 0.2 0.2</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.2 0.2 0.8 1</ambient>
+        <diffuse>0.2 0.2 0.8 1</diffuse>
+      </material>
+    </visual>
+
+  </link>
+</model>
+<!-- ================= Obstacle 1 : Box ================= -->
+<model name="obstacle_box">
+  <static>true</static>
+  <pose>1 -0.9 0.25 0 0 0</pose>
+
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>0.5 0.5 0.5</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.5 0.5 0.5</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>0.6 0.2 0.2 1</ambient>
+        <diffuse>0.6 0.2 0.2 1</diffuse>
+      </material>
+    </visual>
+  </link>
+</model>
+<!-- ================= Obstacle 2 : Cylinder ================= -->
+<model name="obstacle_cylinder">
+  <static>true</static>
+  <pose>0.6 -1.0 0.35 0 0 0</pose>
+
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <cylinder>
+          <radius>0.2</radius>
+          <length>0.7</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <cylinder>
+          <radius>0.2</radius>
+          <length>0.7</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <ambient>0.2 0.2 0.6 1</ambient>
+        <diffuse>0.2 0.2 0.6 1</diffuse>
+      </material>
+    </visual>
+  </link>
+</model>
+
+<!-- ================= TAG / MARKER (visual tag board) ================= -->
+<model name="tag_board">
+  <static>true</static>
+
+  <!-- جای تگ داخل محدوده دیوارها (قابل تغییر بعداً) -->
+  <pose>1.9 -0.6 0.6 0 0 0</pose>
+
+  <link name="tag_link">
+
+    <!-- فقط visual؛ collision هم می‌ذاریم که ربات ازش رد نشه -->
+    <collision name="collision">
+      <geometry>
+        <!-- مثل یک تابلو نازک -->
+        <box>
+          <size>0.02 0.6 0.6</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.02 0.6 0.6</size>
+        </box>
+      </geometry>
+
+      <!-- رنگ تگ -->
+      <material>
+        <ambient>0.9 0.9 0.1 1</ambient>
+        <diffuse>0.9 0.9 0.1 1</diffuse>
+      </material>
+    </visual>
+
+  </link>
+</model>
+
+
+<!-- ================= Industrial arm (separate) ============= -->
+<!--<include>
+  <uri>file:///home/kishu/roboticslab-technical-project/models/simple_diff_bot</uri>
+  <name>robot</name>
+  <pose>0 2.60 0.10 0 0 0</pose>
+</include> -->
+<include>
+  <uri>model://husky</uri>
+  <name>husky</name>
+  <pose>0 0 0.15 0 0 0</pose>
+</include>
+
 <include>
   <uri>file:///home/kishu/roboticslab-technical-project/models/industrial_arm</uri>
   <name>industrial_arm</name>
   <!-- بذارش کنار ربات که تداخل نداشته باشه -->
-<pose>1.4 -0.3 0.05 0 0 0</pose>
+<pose>-1.3 -0.3 0.05 0 0 0</pose>
  
 </include>
   </world>
-</sdf>
-
+</sdf>                    
