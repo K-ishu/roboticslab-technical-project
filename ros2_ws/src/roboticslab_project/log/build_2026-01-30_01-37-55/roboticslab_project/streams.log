@@ -1,0 +1,43 @@
+[11.578s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/roboticslab_project build --build-base /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build install --record /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/install.log --single-version-externally-managed install_data
+[16.273s] running egg_info
+[16.274s] creating build/roboticslab_project/roboticslab_project.egg-info
+[16.572s] writing build/roboticslab_project/roboticslab_project.egg-info/PKG-INFO
+[16.572s] writing dependency_links to build/roboticslab_project/roboticslab_project.egg-info/dependency_links.txt
+[16.572s] writing entry points to build/roboticslab_project/roboticslab_project.egg-info/entry_points.txt
+[16.573s] writing requirements to build/roboticslab_project/roboticslab_project.egg-info/requires.txt
+[16.574s] writing top-level names to build/roboticslab_project/roboticslab_project.egg-info/top_level.txt
+[16.575s] writing manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'
+[17.016s] reading manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'
+[17.018s] writing manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'
+[17.020s] running build
+[17.024s] running build_py
+[17.025s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build
+[17.028s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib
+[17.029s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+[17.037s] copying roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+[17.041s] copying roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+[17.044s] copying roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+[17.045s] running install
+[17.123s] running install_lib
+[17.421s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+[17.423s] copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+[17.424s] copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+[17.431s] copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+[17.439s] byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/arm_controller.py to arm_controller.cpython-312.pyc
+[17.447s] byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/__init__.py to __init__.cpython-312.pyc
+[17.449s] byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/mobile_controller.py to mobile_controller.cpython-312.pyc
+[17.455s] running install_data
+[17.458s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index
+[17.464s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index
+[17.467s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index/packages
+[17.471s] copying resource/roboticslab_project -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index/packages
+[17.471s] copying package.xml -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project
+[17.472s] creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project/launch
+[17.472s] copying launch/simulation.launch.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project/launch
+[17.472s] running install_egg_info
+[17.810s] Copying build/roboticslab_project/roboticslab_project.egg-info to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project-0.0.0-py3.12.egg-info
+[17.810s] running install_scripts
+[19.964s] Installing arm_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/roboticslab_project
+[19.975s] Installing mobile_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/roboticslab_project
+[19.986s] writing list of installed files to '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/install.log'
+[20.283s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/roboticslab_project build --build-base /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build install --record /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/install.log --single-version-externally-managed install_data

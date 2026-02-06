@@ -1,0 +1,243 @@
+[0.000000] (-) TimerEvent: {}
+[0.027083] (roboticslab_project) JobQueued: {'identifier': 'roboticslab_project', 'dependencies': OrderedDict()}
+[0.028807] (roboticslab_project) JobStarted: {'identifier': 'roboticslab_project'}
+[0.103365] (-) TimerEvent: {}
+[0.206007] (-) TimerEvent: {}
+[0.317881] (-) TimerEvent: {}
+[0.418711] (-) TimerEvent: {}
+[0.519358] (-) TimerEvent: {}
+[0.627611] (-) TimerEvent: {}
+[0.728426] (-) TimerEvent: {}
+[0.831365] (-) TimerEvent: {}
+[0.935984] (-) TimerEvent: {}
+[1.041533] (-) TimerEvent: {}
+[1.142319] (-) TimerEvent: {}
+[1.243637] (-) TimerEvent: {}
+[1.355863] (-) TimerEvent: {}
+[1.458037] (-) TimerEvent: {}
+[1.561377] (-) TimerEvent: {}
+[1.661921] (-) TimerEvent: {}
+[1.770400] (-) TimerEvent: {}
+[1.876130] (-) TimerEvent: {}
+[1.983030] (-) TimerEvent: {}
+[2.085591] (-) TimerEvent: {}
+[2.186756] (-) TimerEvent: {}
+[2.291601] (-) TimerEvent: {}
+[2.393148] (-) TimerEvent: {}
+[2.499494] (-) TimerEvent: {}
+[2.602378] (-) TimerEvent: {}
+[2.703181] (-) TimerEvent: {}
+[2.806247] (-) TimerEvent: {}
+[2.908480] (-) TimerEvent: {}
+[3.009299] (-) TimerEvent: {}
+[3.112572] (-) TimerEvent: {}
+[3.214032] (-) TimerEvent: {}
+[3.318414] (-) TimerEvent: {}
+[3.420269] (-) TimerEvent: {}
+[3.531743] (-) TimerEvent: {}
+[3.640354] (-) TimerEvent: {}
+[3.758314] (-) TimerEvent: {}
+[3.862457] (-) TimerEvent: {}
+[3.964711] (-) TimerEvent: {}
+[4.068683] (-) TimerEvent: {}
+[4.169538] (-) TimerEvent: {}
+[4.274932] (-) TimerEvent: {}
+[4.383455] (-) TimerEvent: {}
+[4.487561] (-) TimerEvent: {}
+[4.595622] (-) TimerEvent: {}
+[4.700904] (-) TimerEvent: {}
+[4.803327] (-) TimerEvent: {}
+[4.909051] (-) TimerEvent: {}
+[5.017283] (-) TimerEvent: {}
+[5.117874] (-) TimerEvent: {}
+[5.218570] (-) TimerEvent: {}
+[5.319906] (-) TimerEvent: {}
+[5.429378] (-) TimerEvent: {}
+[5.533386] (-) TimerEvent: {}
+[5.656768] (-) TimerEvent: {}
+[5.762411] (-) TimerEvent: {}
+[5.864789] (-) TimerEvent: {}
+[5.972366] (-) TimerEvent: {}
+[6.074595] (-) TimerEvent: {}
+[6.178351] (-) TimerEvent: {}
+[6.281620] (-) TimerEvent: {}
+[6.394528] (-) TimerEvent: {}
+[6.503363] (-) TimerEvent: {}
+[6.605757] (-) TimerEvent: {}
+[6.706620] (-) TimerEvent: {}
+[6.811356] (-) TimerEvent: {}
+[6.912102] (-) TimerEvent: {}
+[7.015440] (-) TimerEvent: {}
+[7.118823] (-) TimerEvent: {}
+[7.224768] (-) TimerEvent: {}
+[7.326412] (-) TimerEvent: {}
+[7.427982] (-) TimerEvent: {}
+[7.532469] (-) TimerEvent: {}
+[7.635616] (-) TimerEvent: {}
+[7.736576] (-) TimerEvent: {}
+[7.843482] (-) TimerEvent: {}
+[7.950221] (-) TimerEvent: {}
+[8.056243] (-) TimerEvent: {}
+[8.157136] (-) TimerEvent: {}
+[8.258913] (-) TimerEvent: {}
+[8.363634] (-) TimerEvent: {}
+[8.468877] (-) TimerEvent: {}
+[8.572987] (-) TimerEvent: {}
+[8.674337] (-) TimerEvent: {}
+[8.783204] (-) TimerEvent: {}
+[8.896170] (-) TimerEvent: {}
+[8.997634] (-) TimerEvent: {}
+[9.101453] (-) TimerEvent: {}
+[9.208713] (-) TimerEvent: {}
+[9.309308] (-) TimerEvent: {}
+[9.414136] (-) TimerEvent: {}
+[9.517547] (-) TimerEvent: {}
+[9.623243] (-) TimerEvent: {}
+[9.724878] (-) TimerEvent: {}
+[9.833760] (-) TimerEvent: {}
+[9.937505] (-) TimerEvent: {}
+[10.038170] (-) TimerEvent: {}
+[10.144672] (-) TimerEvent: {}
+[10.250412] (-) TimerEvent: {}
+[10.353615] (-) TimerEvent: {}
+[10.457075] (-) TimerEvent: {}
+[10.560414] (-) TimerEvent: {}
+[10.662460] (-) TimerEvent: {}
+[10.763138] (-) TimerEvent: {}
+[10.872355] (-) TimerEvent: {}
+[10.973128] (-) TimerEvent: {}
+[11.075197] (-) TimerEvent: {}
+[11.178979] (-) TimerEvent: {}
+[11.284575] (-) TimerEvent: {}
+[11.390379] (-) TimerEvent: {}
+[11.493493] (-) TimerEvent: {}
+[11.604074] (roboticslab_project) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', 'build/roboticslab_project', 'build', '--build-base', '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build', 'install', '--record', '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'kishu', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/kishu', 'OLDPWD': '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3011', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/kishu/roboticslab-technical-project/ros2_ws/install:/home/kishu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kishu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'kishu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/kishu-VirtualBox:@/tmp/.ICE-unix/2976,unix/kishu-VirtualBox:/tmp/.ICE-unix/2976', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/eac15136_9678_43ca_a4f1_d7f3cb353c2f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/ros2_ws/install/armando_gazebo:/home/kishu/ros2_ws/install/armando_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project/lib/python3.12/site-packages:/home/kishu/ros2_ws/build/armando_gazebo:/home/kishu/ros2_ws/install/armando_gazebo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/kishu/ros2_ws/install/armando_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[11.607510] (-) TimerEvent: {}
+[11.709918] (-) TimerEvent: {}
+[11.823553] (-) TimerEvent: {}
+[11.925630] (-) TimerEvent: {}
+[12.043082] (-) TimerEvent: {}
+[12.148267] (-) TimerEvent: {}
+[12.260435] (-) TimerEvent: {}
+[12.368210] (-) TimerEvent: {}
+[12.476450] (-) TimerEvent: {}
+[12.577450] (-) TimerEvent: {}
+[12.689806] (-) TimerEvent: {}
+[12.792443] (-) TimerEvent: {}
+[12.898819] (-) TimerEvent: {}
+[12.999583] (-) TimerEvent: {}
+[13.107795] (-) TimerEvent: {}
+[13.235434] (-) TimerEvent: {}
+[13.335970] (-) TimerEvent: {}
+[13.438046] (-) TimerEvent: {}
+[13.538907] (-) TimerEvent: {}
+[13.640019] (-) TimerEvent: {}
+[13.742151] (-) TimerEvent: {}
+[13.845409] (-) TimerEvent: {}
+[13.949651] (-) TimerEvent: {}
+[14.053715] (-) TimerEvent: {}
+[14.159992] (-) TimerEvent: {}
+[14.264563] (-) TimerEvent: {}
+[14.373639] (-) TimerEvent: {}
+[14.474428] (-) TimerEvent: {}
+[14.581396] (-) TimerEvent: {}
+[14.684326] (-) TimerEvent: {}
+[14.785436] (-) TimerEvent: {}
+[14.895122] (-) TimerEvent: {}
+[15.005778] (-) TimerEvent: {}
+[15.106877] (-) TimerEvent: {}
+[15.210573] (-) TimerEvent: {}
+[15.314584] (-) TimerEvent: {}
+[15.421489] (-) TimerEvent: {}
+[15.522569] (-) TimerEvent: {}
+[15.627602] (-) TimerEvent: {}
+[15.730753] (-) TimerEvent: {}
+[15.833762] (-) TimerEvent: {}
+[15.934889] (-) TimerEvent: {}
+[16.038377] (-) TimerEvent: {}
+[16.139428] (-) TimerEvent: {}
+[16.239997] (-) TimerEvent: {}
+[16.301880] (roboticslab_project) StdoutLine: {'line': b'running egg_info\n'}
+[16.302430] (roboticslab_project) StdoutLine: {'line': b'creating build/roboticslab_project/roboticslab_project.egg-info\n'}
+[16.347203] (-) TimerEvent: {}
+[16.449567] (-) TimerEvent: {}
+[16.563396] (-) TimerEvent: {}
+[16.600316] (roboticslab_project) StdoutLine: {'line': b'writing build/roboticslab_project/roboticslab_project.egg-info/PKG-INFO\n'}
+[16.600723] (roboticslab_project) StdoutLine: {'line': b'writing dependency_links to build/roboticslab_project/roboticslab_project.egg-info/dependency_links.txt\n'}
+[16.600988] (roboticslab_project) StdoutLine: {'line': b'writing entry points to build/roboticslab_project/roboticslab_project.egg-info/entry_points.txt\n'}
+[16.601238] (roboticslab_project) StdoutLine: {'line': b'writing requirements to build/roboticslab_project/roboticslab_project.egg-info/requires.txt\n'}
+[16.602243] (roboticslab_project) StdoutLine: {'line': b'writing top-level names to build/roboticslab_project/roboticslab_project.egg-info/top_level.txt\n'}
+[16.603183] (roboticslab_project) StdoutLine: {'line': b"writing manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'\n"}
+[16.663953] (-) TimerEvent: {}
+[16.764697] (-) TimerEvent: {}
+[16.871958] (-) TimerEvent: {}
+[16.984323] (-) TimerEvent: {}
+[17.043765] (roboticslab_project) StdoutLine: {'line': b"reading manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'\n"}
+[17.046833] (roboticslab_project) StdoutLine: {'line': b"writing manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'\n"}
+[17.048051] (roboticslab_project) StdoutLine: {'line': b'running build\n'}
+[17.050226] (roboticslab_project) StdoutLine: {'line': b'running build_py\n'}
+[17.053385] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build\n'}
+[17.056111] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib\n'}
+[17.057256] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[17.065662] (roboticslab_project) StdoutLine: {'line': b'copying roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[17.066226] (roboticslab_project) StdoutLine: {'line': b'copying roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[17.072394] (roboticslab_project) StdoutLine: {'line': b'copying roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[17.072885] (roboticslab_project) StdoutLine: {'line': b'running install\n'}
+[17.084480] (-) TimerEvent: {}
+[17.151933] (roboticslab_project) StdoutLine: {'line': b'running install_lib\n'}
+[17.187686] (-) TimerEvent: {}
+[17.288380] (-) TimerEvent: {}
+[17.389444] (-) TimerEvent: {}
+[17.449824] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project\n'}
+[17.451628] (roboticslab_project) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project\n'}
+[17.452819] (roboticslab_project) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project\n'}
+[17.459110] (roboticslab_project) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project\n'}
+[17.467602] (roboticslab_project) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/arm_controller.py to arm_controller.cpython-312.pyc\n'}
+[17.474756] (roboticslab_project) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/__init__.py to __init__.cpython-312.pyc\n'}
+[17.476777] (roboticslab_project) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/mobile_controller.py to mobile_controller.cpython-312.pyc\n'}
+[17.483076] (roboticslab_project) StdoutLine: {'line': b'running install_data\n'}
+[17.486840] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index\n'}
+[17.490587] (-) TimerEvent: {}
+[17.492652] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index\n'}
+[17.493111] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index/packages\n'}
+[17.495924] (roboticslab_project) StdoutLine: {'line': b'copying resource/roboticslab_project -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index/packages\n'}
+[17.499742] (roboticslab_project) StdoutLine: {'line': b'copying package.xml -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project\n'}
+[17.500200] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project/launch\n'}
+[17.500523] (roboticslab_project) StdoutLine: {'line': b'copying launch/simulation.launch.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project/launch\n'}
+[17.500899] (roboticslab_project) StdoutLine: {'line': b'running install_egg_info\n'}
+[17.592362] (-) TimerEvent: {}
+[17.696536] (-) TimerEvent: {}
+[17.799637] (-) TimerEvent: {}
+[17.837979] (roboticslab_project) StdoutLine: {'line': b'Copying build/roboticslab_project/roboticslab_project.egg-info to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project-0.0.0-py3.12.egg-info\n'}
+[17.838771] (roboticslab_project) StdoutLine: {'line': b'running install_scripts\n'}
+[17.900052] (-) TimerEvent: {}
+[18.003382] (-) TimerEvent: {}
+[18.106595] (-) TimerEvent: {}
+[18.209133] (-) TimerEvent: {}
+[18.334374] (-) TimerEvent: {}
+[18.435252] (-) TimerEvent: {}
+[18.535941] (-) TimerEvent: {}
+[18.643924] (-) TimerEvent: {}
+[18.752605] (-) TimerEvent: {}
+[18.854685] (-) TimerEvent: {}
+[18.955413] (-) TimerEvent: {}
+[19.062624] (-) TimerEvent: {}
+[19.167213] (-) TimerEvent: {}
+[19.269418] (-) TimerEvent: {}
+[19.374023] (-) TimerEvent: {}
+[19.478370] (-) TimerEvent: {}
+[19.589659] (-) TimerEvent: {}
+[19.691118] (-) TimerEvent: {}
+[19.796401] (-) TimerEvent: {}
+[19.904008] (-) TimerEvent: {}
+[19.991140] (roboticslab_project) StdoutLine: {'line': b'Installing arm_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/roboticslab_project\n'}
+[20.003034] (roboticslab_project) StdoutLine: {'line': b'Installing mobile_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/roboticslab_project\n'}
+[20.007017] (-) TimerEvent: {}
+[20.009795] (roboticslab_project) StdoutLine: {'line': b"writing list of installed files to '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/install.log'\n"}
+[20.109445] (-) TimerEvent: {}
+[20.212607] (-) TimerEvent: {}
+[20.311430] (roboticslab_project) CommandEnded: {'returncode': 0}
+[20.312658] (-) TimerEvent: {}
+[20.425377] (-) TimerEvent: {}
+[20.456663] (roboticslab_project) JobEnded: {'identifier': 'roboticslab_project', 'rc': 0}
+[20.489361] (-) EventReactorShutdown: {}

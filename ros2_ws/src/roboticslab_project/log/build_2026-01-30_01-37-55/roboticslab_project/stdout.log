@@ -1,0 +1,41 @@
+running egg_info
+creating build/roboticslab_project/roboticslab_project.egg-info
+writing build/roboticslab_project/roboticslab_project.egg-info/PKG-INFO
+writing dependency_links to build/roboticslab_project/roboticslab_project.egg-info/dependency_links.txt
+writing entry points to build/roboticslab_project/roboticslab_project.egg-info/entry_points.txt
+writing requirements to build/roboticslab_project/roboticslab_project.egg-info/requires.txt
+writing top-level names to build/roboticslab_project/roboticslab_project.egg-info/top_level.txt
+writing manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'
+reading manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'
+writing manifest file 'build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+copying roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+copying roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+copying roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project
+running install
+running install_lib
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+copying /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/build/lib/roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/arm_controller.py to arm_controller.cpython-312.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project/mobile_controller.py to mobile_controller.cpython-312.pyc
+running install_data
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index/packages
+copying resource/roboticslab_project -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/ament_index/resource_index/packages
+copying package.xml -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project
+creating /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project/launch
+copying launch/simulation.launch.py -> /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/share/roboticslab_project/launch
+running install_egg_info
+Copying build/roboticslab_project/roboticslab_project.egg-info to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/python3.12/site-packages/roboticslab_project-0.0.0-py3.12.egg-info
+running install_scripts
+Installing arm_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/roboticslab_project
+Installing mobile_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/install/roboticslab_project/lib/roboticslab_project
+writing list of installed files to '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project/build/roboticslab_project/install.log'
