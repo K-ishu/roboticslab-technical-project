@@ -1,6 +1,7 @@
 # Multi-Robot Cooperative System
 # Robotics Lab – Technical Project
 # ROS 2 Humble + Gazebo Classic
+<img width="1366" height="768" alt="overview" src="https://github.com/user-attachments/assets/5e51b613-a97f-46b7-8e37-70ee7cf35b64" />
 
 -----------------------------------------------------------------------
 
