@@ -85,7 +85,7 @@ TurtleBot3:
 
 Main Node:
 scenario_coordinator
-
+```ros2 topic list```
 Topics:
 - /cmd_vel
 - /odom
@@ -98,7 +98,7 @@ Services:
 - /detach
 
 Service type:
-gazebo_ros_link_attacher/Attach
+```gazebo_ros_link_attacher/Attach```
 
 -----------------------------------------------------------------------
 
