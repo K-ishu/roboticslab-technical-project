@@ -1,4 +1,4 @@
-# Multi-Robot Cooperative Autonomous System
+# Multi-Robot Cooperative System
 # Robotics Lab – Technical Project
 # ROS 2 Humble + Gazebo Classic
 
