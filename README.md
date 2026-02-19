@@ -1,87 +1,192 @@
-Multi-Robot Cooperative System in Gazebo (ROS 2 Humble)
-Robotics Lab – Technical Project 2026
+# Multi-Robot Cooperative Autonomous System
+# Robotics Lab – Technical Project
+# ROS 2 Humble + Gazebo Classic
 
-This repository contains a case-study implementation of a cooperative multi-robot autonomous system simulated in Gazebo Classic using ROS 2 Humble.
+-----------------------------------------------------------------------
 
-The system demonstrates coordination between a mobile robot (TurtleBot3) and an industrial manipulator (KUKA LBR iiwa) to accomplish a transport and pick-and-place task in a custom simulation environment.
+#PROJECT OVERVIEW
 
+This repository contains a case-study implementation of a cooperative
+multi-robot autonomous system simulated in Gazebo Classic using ROS 2 Humble.
 
+The system demonstrates collaboration between:
 
-1 Problem Description
+- TurtleBot3 Waffle Pi (mobile differential drive robot)
+- KUKA LBR iiwa industrial manipulator
 
-The objective of this project is to design and simulate an autonomous interactive multi-robot system in which:
+The objective is to execute a complete cooperative workflow including:
+navigation, object transport, grasping, and placement.
 
-1.A mobile robot navigates in a cluttered environment.
+-----------------------------------------------------------------------
 
-2.It approaches and captures a movable object.
+#CASE STUDY DESCRIPTION
 
-3.It transports the object to a predefined handover zone.
+1) TurtleBot3 navigates autonomously using LiDAR.
+2) TurtleBot3 aligns with a stone object.
+3) The stone is attached using gazebo_ros_link_attacher.
+4) TurtleBot3 transports the stone near the robotic arm.
+5) The stone is detached in a predefined pick position.
+6) The robotic arm executes a joint trajectory.
+7) The arm grasps the stone (attach to end-effector).
+8) The arm places the stone inside a container.
+9) TurtleBot3 returns to its initial position.
 
-4.An industrial robotic arm grasps the object.
+-----------------------------------------------------------------------
 
-5.The arm places the object inside a container.
+#SIMULATION ENVIRONMENT
 
-6.The mobile robot returns to its initial position.
-
-This scenario represents a simplified industrial logistics workflow involving robot collaboration.
-
-
-2. Simulation Setup
-Custom Gazebo World
-
-World file:  
+World file:
 worlds/lab_world.sdf
 
-The world includes:
+The environment includes:
+- Static boundary walls
+- Obstacle box
+- Obstacle cylinder
+- Cylindrical stone (dynamic object)
+- Container (placement target)
+- TurtleBot3 Waffle Pi
+- KUKA LBR iiwa (ros2_control enabled)
 
-Boundary brick walls
+#Important poses:
 
-Ground plane
+Arm Base:
+(-1.3, -0.3, 0)
 
-A movable stone object
+Container:
+(-1.54015, -1.08473, 0)
 
-A cylindrical container (target placement area)
+Obstacle Box:
+(1.51611, -3.24702, 0.25)
 
-Static obstacle box
+Obstacle Cylinder:
+(2.87436, -2.43085, 0.35)
 
-Static obstacle cylinder
+-----------------------------------------------------------------------
 
-TurtleBot3 Waffle Pi
+#ROBOTS
 
-KUKA LBR iiwa (ros2_control enabled).       
+TurtleBot3:
+- /cmd_vel
+- /odom
+- /tb3/scan
+- Reactive obstacle avoidance
+- Stuck detection and recovery
 
+#KUKA LBR iiwa:
+- ros2_control enabled
+- joint_trajectory_controller
+- /iiwa_arm_controller/joint_trajectory
+- End-effector link:
+  lbr_iiwa::lbr_iiwa_link_7
 
-Important Object Poses
+-----------------------------------------------------------------------
 
-| Element           | Pose                      |
-| ----------------- | ------------------------- |
-| Arm base          | (-1.3, -0.3, 0)           |
-| Container         | (-1.54015, -1.08473, 0)   |
-| Obstacle box      | (1.51611, -3.24702, 0.25) |
-| Obstacle cylinder | (2.87436, -2.43085, 0.35) |
+#SYSTEM ARCHITECTURE
 
+Main Node:
+scenario_coordinator
 
-Robots
-TurtleBot3 (Differential Drive)
+Topics:
+- /cmd_vel
+- /odom
+- /tb3/scan
+- /iiwa_arm_controller/joint_trajectory
+- /scenario_status
 
-Motion control via /cmd_vel
+Services:
+- /attach
+- /detach
 
-Odometry feedback via /odom
+Service type:
+gazebo_ros_link_attacher/Attach
 
-LiDAR sensor via /tb3/scan
+-----------------------------------------------------------------------
 
-Reactive obstacle avoidance
+#CONTROL LOGIC
 
-Stone attach/detach capability using Gazebo link attacher
+TurtleBot3:
+- Sector-based LiDAR avoidance
+- Speed scaling
+- Angular correction
+- Recovery behavior
 
+Stone Alignment:
+- Front-cone LaserScan detection
+- Angle minimization
+- Slow approach
+- Hard stop before attach
 
-KUKA LBR iiwa (Industrial Arm)
+Arm Pick & Place:
+- Fix stone pose to grasp position
+- Publish joint trajectory
+- Attach stone to EE link
+- Move to container
+- Fix placement pose
+- Detach
 
-Controlled using ros2_control
+-----------------------------------------------------------------------
 
-Joint trajectory interface
+#STATE MACHINE
 
-/iiwa_arm_controller/joint_trajectory
+1) TB3_GOTO_STONE_AREA
+2) TB3_TOUCH_AND_ATTACH
+3) ATTACH
+4) TB3_PUSH_TO_ARM
+5) TB3_DETACH_NEAR_ARM
+6) ARM_PICK_PLACE
+7) TB3_GOTO_HOME
+8) DONE
 
-End-effector grasp simulated via dynamic link attachment
+Monitor state:
 
+ros2 topic echo /scenario_status
+
+-----------------------------------------------------------------------
+
+#LAUNCH INSTRUCTIONS
+
+cd ~/roboticslab-technical-project/ros2_ws
+colcon build
+source install/setup.bash
+ros2 launch multi_robot_coop scenario.launch.py
+
+-----------------------------------------------------------------------
+
+#DEPENDENCIES
+
+Ubuntu 22.04
+ROS 2 Humble
+Gazebo Classic
+gazebo_ros
+gazebo_ros_link_attacher
+ros2_control
+joint_state_broadcaster
+joint_trajectory_controller
+
+-----------------------------------------------------------------------
+
+#RESULTS
+
+The system successfully demonstrates:
+
+- Autonomous navigation
+- Obstacle avoidance
+- Service-based multi-robot cooperation
+- Industrial arm manipulation
+- Coordinated pick-and-place
+
+-----------------------------------------------------------------------
+
+#VIDEO DEMO
+
+<Insert MS Teams / YouTube link here>
+
+-----------------------------------------------------------------------
+
+#AUTHOR
+
+Name: Mohammad reza khodashenas
+Course: Robotics Lab – Technical Project
+Year: 2026
+
+-----------------------------------------------------------------------
