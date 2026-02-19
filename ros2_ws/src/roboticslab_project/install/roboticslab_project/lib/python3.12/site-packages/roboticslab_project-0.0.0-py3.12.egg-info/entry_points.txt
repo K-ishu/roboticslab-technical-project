@@ -1,3 +1,0 @@
-[console_scripts]
-arm_controller = roboticslab_project.arm_controller:main
-mobile_controller = roboticslab_project.mobile_controller:main
