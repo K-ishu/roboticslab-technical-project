@@ -139,17 +139,17 @@ Arm Pick & Place:
 
 Monitor state:
 
-ros2 topic echo /scenario_status
+```ros2 topic echo /scenario_status```
 
 -----------------------------------------------------------------------
 
 **LAUNCH INSTRUCTIONS**
-
+```
 cd ~/roboticslab-technical-project/ros2_ws
 colcon build
 source install/setup.bash
 ros2 launch multi_robot_coop scenario.launch.py
-
+```
 -----------------------------------------------------------------------
 
 **DEPENDENCIES**
