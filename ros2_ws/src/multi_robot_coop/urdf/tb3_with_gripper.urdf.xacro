@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot name="tb3_with_gripper" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ============================= -->
+  <!--   TurtleBot3 Waffle Pi       -->
+  <!-- ============================= -->
+
+  <xacro:include filename="/opt/ros/humble/share/turtlebot3_manipulation_gazebo/urdf/turtlebot3_waffle_pi.urdf.xacro"/>
+  <xacro:turtlebot3_waffle_pi prefix=""/>
+
+  <!-- ============================= -->
+  <!--     OpenManipulator-X        -->
+  <!-- ============================= -->
+
+  <xacro:include filename="/opt/ros/humble/share/turtlebot3_manipulation_gazebo/urdf/open_manipulator_x.urdf.xacro"/>
+  <xacro:open_manipulator_x prefix=""/>
+
+  <!-- اتصال بازو به بدنه ربات -->
+  <joint name="base_fixed" type="fixed">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="-0.092 0.0 0.091" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================= -->
+  <!--     رنگ مشکی ربات           -->
+  <!-- ============================= -->
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="base_footprint">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="chassis_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+</robot>
