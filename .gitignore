@@ -1,6 +1,7 @@
 # ignore all models by default
-models/*
+#models/*
 
 # keep only these
 !models/turtlebot3_waffle_pi/
 !models/industrial_arm/
+docs/
