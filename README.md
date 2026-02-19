@@ -194,7 +194,7 @@ because of the system problem the gazebo crashed and you can see just first part
 **AUTHOR**
 
 Name: Mohammad reza khodashenas
-Course: Robotics Lab – Technical Project
+Course: Robotics Lab – Technical Project  professor:Mario salvegio
 Year: 2026
 
 -----------------------------------------------------------------------
