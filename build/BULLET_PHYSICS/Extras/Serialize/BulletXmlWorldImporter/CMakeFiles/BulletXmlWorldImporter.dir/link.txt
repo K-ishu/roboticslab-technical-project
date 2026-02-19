@@ -1,2 +1,0 @@
-/usr/bin/ar qc libBulletXmlWorldImporter.a CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.cpp.o CMakeFiles/BulletXmlWorldImporter.dir/string_split.cpp.o CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp.o
-/usr/bin/ranlib libBulletXmlWorldImporter.a

@@ -1,1 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/src/multi_robot_coop/setup.py

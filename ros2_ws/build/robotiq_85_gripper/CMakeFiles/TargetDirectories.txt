@@ -1,9 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/uninstall.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/robotiq_85_gripper_uninstall.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/test.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/edit_cache.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/rebuild_cache.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/list_install_components.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/install.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/install/local.dir
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/CMakeFiles/install/strip.dir

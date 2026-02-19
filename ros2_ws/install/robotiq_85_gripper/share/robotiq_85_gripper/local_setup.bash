@@ -1,1 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/ament_cmake_environment_hooks/local_setup.bash

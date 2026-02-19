@@ -1,1 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs/rosidl_generator_cpp/robotiq_85_msgs/msg/gripper_cmd.hpp

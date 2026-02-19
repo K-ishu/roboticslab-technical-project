@@ -4,6 +4,21 @@
 # keep only these
 !models/turtlebot3_waffle_pi/
 !models/industrial_arm/
+
 docs/
 docs/
 ros2_ws/src/roboticslab_project/
+# Build artifacts / runtime
+build/
+install/
+log/
+gazebo_models/
+scripts/
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python cache
+__pycache__/
+*.pyc
+

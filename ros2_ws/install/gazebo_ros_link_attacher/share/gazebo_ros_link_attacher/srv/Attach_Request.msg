@@ -1,1 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/rosidl_cmake/srv/Attach_Request.msg

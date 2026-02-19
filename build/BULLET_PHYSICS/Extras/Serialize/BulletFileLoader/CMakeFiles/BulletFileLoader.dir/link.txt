@@ -1,2 +1,0 @@
-/usr/bin/ar qc libBulletFileLoader.a CMakeFiles/BulletFileLoader.dir/bChunk.cpp.o CMakeFiles/BulletFileLoader.dir/bDNA.cpp.o CMakeFiles/BulletFileLoader.dir/bFile.cpp.o CMakeFiles/BulletFileLoader.dir/btBulletFile.cpp.o
-/usr/bin/ranlib libBulletFileLoader.a

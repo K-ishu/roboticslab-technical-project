@@ -1,6 +1,0 @@
-[console_scripts]
-robotiq_85_driver = robotiq_85_driver.robotiq_85_driver:main
-robotiq_85_test = robotiq_85_driver.robotiq_85_test:main
-robotiq_85_test_close = robotiq_85_driver.robotiq_85_test_close:main
-single_robotiq_85_action_server = robotiq_85_driver.single_robotiq_85_action_server:main
-

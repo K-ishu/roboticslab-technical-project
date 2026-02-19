@@ -1,1 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description/ament_cmake_core/robotiq_85_descriptionConfig-version.cmake

@@ -1,1 +1,0 @@
-/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/rosidl_generator_cpp/gazebo_ros_link_attacher/srv/detail/attach__type_support.hpp
