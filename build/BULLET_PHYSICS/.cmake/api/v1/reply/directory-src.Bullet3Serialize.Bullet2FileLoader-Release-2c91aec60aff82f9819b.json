@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"src/Bullet3Serialize/Bullet2FileLoader/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 44,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.a"
+			],
+			"targetId" : "Bullet2FileLoader::@f3ed323e085a826c5b14",
+			"targetIndex" : 11,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/bullet",
+			"paths" : 
+			[
+				"src/Bullet3Serialize/Bullet2FileLoader"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/Bullet3Serialize/Bullet2FileLoader",
+		"source" : "src/Bullet3Serialize/Bullet2FileLoader"
+	}
+}

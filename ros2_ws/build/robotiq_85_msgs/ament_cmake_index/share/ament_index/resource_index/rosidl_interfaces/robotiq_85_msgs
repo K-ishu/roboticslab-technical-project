@@ -1,0 +1,4 @@
+msg/GripperCmd.idl
+msg/GripperCmd.msg
+msg/GripperStat.idl
+msg/GripperStat.msg

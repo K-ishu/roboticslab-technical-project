@@ -1,0 +1,740 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "Extras/BulletRoboticsGUI/libBulletRoboticsGUI.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_LIBRARY",
+			"INSTALL",
+			"ADD_DEFINITIONS",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"Extras/BulletRoboticsGUI/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 163,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 174,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 113,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 126,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 399,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 160,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 248,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 130,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "BT_ENABLE_CLSOCKET"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "BT_ENABLE_ENET"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "BT_USE_EGL"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "HAS_SOCKLEN_T"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "PHYSICS_SERVER_DIRECT"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "USE_GRAPHICAL_BENCHMARK"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "_LINUX"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/src"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/SharedMemory"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs/enet/include"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs/clsocket/src"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				74,
+				75,
+				76,
+				77,
+				78,
+				84,
+				85,
+				86
+			]
+		}
+	],
+	"id" : "BulletRoboticsGUI::@dc5cedd4e2be1c9aa575",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/home/kishu/roboticslab-technical-project/install/BULLET_PHYSICS"
+		}
+	},
+	"name" : "BulletRoboticsGUI",
+	"nameOnDisk" : "libBulletRoboticsGUI.a",
+	"paths" : 
+	{
+		"build" : "Extras/BulletRoboticsGUI",
+		"source" : "Extras/BulletRoboticsGUI"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				79,
+				80,
+				81,
+				82,
+				83
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				74,
+				75,
+				76,
+				77,
+				78,
+				84,
+				85,
+				86
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/Common2dCanvasInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonCallbacks.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonCameraInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonExampleInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonFileIOInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonGraphicsAppInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonGUIHelperInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonMultiBodyBase.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonParameterInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonRenderInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonRigidBodyBase.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/CommonInterfaces/CommonWindowInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/OpenGLWindow/SimpleCamera.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/TinyRenderer/geometry.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/TinyRenderer/model.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/TinyRenderer/tgaimage.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/TinyRenderer/our_gl.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/TinyRenderer/TinyRenderer.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/IKTrajectoryHelper.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/InProcessMemory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsServer.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsClient.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsServerSharedMemory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsDirect.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsDirectC_API.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsServerCommandProcessor.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/b3PluginManager.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsClientSharedMemory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsClientSharedMemory_C_API.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PhysicsClientC_API.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/SharedMemoryPublic.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/Win32SharedMemory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/PosixSharedMemory.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Utils/b3ResourcePath.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Utils/RobotLoggingUtil.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Utils/b3Clock.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Utils/ChromeTraceUtil.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Utils/b3ERPCFMHelper.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Utils/b3ReferenceFrameHelper.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/tinyxml2/tinyxml2.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/stb_image/stb_image.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/Jacobian.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/LinearR2.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/LinearR3.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/LinearR4.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/MatrixRmn.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/Node.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/Tree.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/ThirdPartyLibs/BussIK/VectorRn.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportObjDemo/LoadMeshFromObj.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportMJCFDemo/BulletMJCFImporter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/BulletUrdfImporter.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/MyMultiBodyCreator.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/URDF2Bullet.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/UrdfParser.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/urdfStringSplit.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/URDFImporterInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/URDFJointTypes.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/SDFAudioTypes.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/MultiThreading/b3PosixThreadSupport.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/MultiThreading/b3Win32ThreadSupport.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/MultiThreading/b3ThreadSupportInterface.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/ExampleBrowser/InProcessExampleBrowser.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/GraphicsServerExample.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/GraphicsClientExample.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/RemoteGUIHelper.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/RemoteGUIHelperTCP.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsServerExample.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsClientExample.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/RemoteGUIHelper.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsSharedMemoryCommands.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsSharedMemoryPublic.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/PhysicsServerExample.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/PhysicsServerExampleBullet2.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

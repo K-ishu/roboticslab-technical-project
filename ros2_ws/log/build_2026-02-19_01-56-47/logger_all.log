@@ -1,0 +1,468 @@
+[0.190s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.190s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x790212f709a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x790212f703d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x790212f703d0>>)
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.435s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.436s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kishu/roboticslab-technical-project/ros2_ws'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.436s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extension 'ignore'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extension 'ignore_ament_install'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extensions ['colcon_pkg']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extension 'colcon_pkg'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extensions ['colcon_meta']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extension 'colcon_meta'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extensions ['ros']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_link_attacher) by extension 'ros'
+[0.455s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros_link_attacher' with type 'ros.ament_cmake' and name 'gazebo_ros_link_attacher'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extensions ['ignore', 'ignore_ament_install']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extension 'ignore'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extension 'ignore_ament_install'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extensions ['colcon_pkg']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extension 'colcon_pkg'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extensions ['colcon_meta']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extension 'colcon_meta'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extensions ['ros']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_robot_coop) by extension 'ros'
+[0.457s] DEBUG:colcon.colcon_core.package_identification:Package 'src/multi_robot_coop' with type 'ros.ament_python' and name 'multi_robot_coop'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extensions ['ignore', 'ignore_ament_install']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'ignore'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'ignore_ament_install'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extensions ['colcon_pkg']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'colcon_pkg'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extensions ['colcon_meta']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'colcon_meta'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extensions ['ros']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'ros'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extensions ['cmake', 'python']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'cmake'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'python'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extensions ['python_setup_py']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper) by extension 'python_setup_py'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extensions ['ignore', 'ignore_ament_install']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extension 'ignore'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extension 'ignore_ament_install'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extensions ['colcon_pkg']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extension 'colcon_pkg'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extensions ['colcon_meta']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extension 'colcon_meta'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extensions ['ros']
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_description) by extension 'ros'
+[0.460s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robotiq_85_gripper/robotiq_85_description' with type 'ros.ament_cmake' and name 'robotiq_85_description'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extension 'ignore'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extension 'ignore_ament_install'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extensions ['colcon_pkg']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extension 'colcon_pkg'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extensions ['colcon_meta']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extension 'colcon_meta'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extensions ['ros']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_driver) by extension 'ros'
+[0.463s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robotiq_85_gripper/robotiq_85_driver' with type 'ros.ament_python' and name 'robotiq_85_driver'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extensions ['ignore', 'ignore_ament_install']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extension 'ignore'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extension 'ignore_ament_install'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extensions ['colcon_pkg']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extension 'colcon_pkg'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extensions ['colcon_meta']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extension 'colcon_meta'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extensions ['ros']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_gripper) by extension 'ros'
+[0.464s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robotiq_85_gripper/robotiq_85_gripper' with type 'ros.ament_cmake' and name 'robotiq_85_gripper'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extension 'ignore'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extension 'ignore_ament_install'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extensions ['colcon_pkg']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extension 'colcon_pkg'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extensions ['colcon_meta']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extension 'colcon_meta'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extensions ['ros']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotiq_85_gripper/robotiq_85_msgs) by extension 'ros'
+[0.465s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robotiq_85_gripper/robotiq_85_msgs' with type 'ros.ament_cmake' and name 'robotiq_85_msgs'
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.502s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.502s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.505s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 481 installed packages in /opt/ros/humble
+[0.508s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'cmake_args' from command line to 'None'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'cmake_target' from command line to 'None'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'cmake_clean_first' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'cmake_force_configure' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'ament_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_link_attacher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.585s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_ros_link_attacher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher', 'merge_install': False, 'path': '/home/kishu/roboticslab-technical-project/ros2_ws/src/gazebo_ros_link_attacher', 'symlink_install': True, 'test_result_base': None}
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'cmake_target' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'cmake_clean_first' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'cmake_force_configure' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'ament_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_coop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.586s] DEBUG:colcon.colcon_core.verb:Building package 'multi_robot_coop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop', 'merge_install': False, 'path': '/home/kishu/roboticslab-technical-project/ros2_ws/src/multi_robot_coop', 'symlink_install': True, 'test_result_base': None}
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'cmake_target' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.586s] DEBUG:colcon.colcon_core.verb:Building package 'robotiq_85_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description', 'merge_install': False, 'path': '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_description', 'symlink_install': True, 'test_result_base': None}
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'cmake_target' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.587s] DEBUG:colcon.colcon_core.verb:Building package 'robotiq_85_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs', 'merge_install': False, 'path': '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.588s] DEBUG:colcon.colcon_core.verb:Building package 'robotiq_85_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver', 'merge_install': False, 'path': '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_driver', 'symlink_install': True, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'cmake_clean_first' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'cmake_force_configure' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'ament_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'catkin_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'robotiq_85_gripper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'robotiq_85_gripper' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper', 'merge_install': False, 'path': '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_gripper', 'symlink_install': True, 'test_result_base': None}
+[0.589s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.591s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.591s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_msgs' with build type 'ament_cmake'
+[0.591s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_msgs'
+[0.595s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.595s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.595s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.600s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_description' with build type 'ament_cmake'
+[0.601s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_description'
+[0.601s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.601s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.606s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/gazebo_ros_link_attacher' with build type 'ament_cmake'
+[0.606s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/gazebo_ros_link_attacher'
+[0.607s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.607s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.613s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/multi_robot_coop' with build type 'ament_python'
+[0.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_robot_coop', 'ament_prefix_path')
+[0.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/hook/ament_prefix_path.ps1'
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/hook/ament_prefix_path.dsv'
+[0.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/hook/ament_prefix_path.sh'
+[0.619s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.620s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs -- -j4 -l4
+[0.640s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description -- -j4 -l4
+[0.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher -- -j4 -l4
+[1.583s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/multi_robot_coop'
+[1.584s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.584s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description -- -j4 -l4
+[1.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description
+[1.697s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_description)
+[1.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description
+[1.703s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description' for CMake module files
+[1.704s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description' for CMake config files
+[1.706s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_description', 'cmake_prefix_path')
+[1.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/hook/cmake_prefix_path.ps1'
+[1.708s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/hook/cmake_prefix_path.dsv'
+[1.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/hook/cmake_prefix_path.sh'
+[1.710s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/bin'
+[1.710s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/lib/pkgconfig/robotiq_85_description.pc'
+[1.712s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/lib/python3.10/site-packages'
+[1.713s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/bin'
+[1.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.ps1'
+[1.717s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.dsv'
+[1.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.sh'
+[1.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.bash'
+[1.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.zsh'
+[1.727s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/colcon-core/packages/robotiq_85_description)
+[1.728s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_description)
+[1.729s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description' for CMake module files
+[1.732s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description' for CMake config files
+[1.734s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_description', 'cmake_prefix_path')
+[1.735s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/hook/cmake_prefix_path.ps1'
+[1.736s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/hook/cmake_prefix_path.dsv'
+[1.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/hook/cmake_prefix_path.sh'
+[1.739s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/bin'
+[1.740s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/lib/pkgconfig/robotiq_85_description.pc'
+[1.742s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/lib/python3.10/site-packages'
+[1.743s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/bin'
+[1.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.ps1'
+[1.749s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.dsv'
+[1.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.sh'
+[1.752s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.bash'
+[1.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.zsh'
+[1.762s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/colcon-core/packages/robotiq_85_description)
+[1.932s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher -- -j4 -l4
+[1.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher
+[1.972s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs -- -j4 -l4
+[1.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs
+[2.161s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros_link_attacher)
+[2.162s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher' for CMake module files
+[2.164s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher
+[2.165s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher' for CMake config files
+[2.167s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros_link_attacher', 'cmake_prefix_path')
+[2.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/cmake_prefix_path.ps1'
+[2.169s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/cmake_prefix_path.dsv'
+[2.170s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/cmake_prefix_path.sh'
+[2.171s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib'
+[2.172s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros_link_attacher', 'ld_library_path_lib')
+[2.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/ld_library_path_lib.ps1'
+[2.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/ld_library_path_lib.dsv'
+[2.174s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/ld_library_path_lib.sh'
+[2.175s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/bin'
+[2.175s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/pkgconfig/gazebo_ros_link_attacher.pc'
+[2.176s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/python3.10/site-packages'
+[2.177s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/bin'
+[2.178s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.ps1'
+[2.181s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.dsv'
+[2.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.sh'
+[2.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.bash'
+[2.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.zsh'
+[2.184s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/colcon-core/packages/gazebo_ros_link_attacher)
+[2.185s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros_link_attacher)
+[2.186s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher' for CMake module files
+[2.187s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher' for CMake config files
+[2.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros_link_attacher', 'cmake_prefix_path')
+[2.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/cmake_prefix_path.ps1'
+[2.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/cmake_prefix_path.dsv'
+[2.197s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/cmake_prefix_path.sh'
+[2.198s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib'
+[2.198s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros_link_attacher', 'ld_library_path_lib')
+[2.198s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/ld_library_path_lib.ps1'
+[2.199s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/ld_library_path_lib.dsv'
+[2.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/hook/ld_library_path_lib.sh'
+[2.200s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/bin'
+[2.200s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/pkgconfig/gazebo_ros_link_attacher.pc'
+[2.200s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/python3.10/site-packages'
+[2.201s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/bin'
+[2.201s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.ps1'
+[2.203s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.dsv'
+[2.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.sh'
+[2.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.bash'
+[2.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.zsh'
+[2.207s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/colcon-core/packages/gazebo_ros_link_attacher)
+[2.211s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_msgs)
+[2.211s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs' for CMake module files
+[2.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_msgs
+[2.215s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs' for CMake config files
+[2.216s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_msgs', 'cmake_prefix_path')
+[2.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/cmake_prefix_path.ps1'
+[2.217s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/cmake_prefix_path.dsv'
+[2.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/cmake_prefix_path.sh'
+[2.219s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib'
+[2.219s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_msgs', 'ld_library_path_lib')
+[2.219s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/ld_library_path_lib.ps1'
+[2.220s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/ld_library_path_lib.dsv'
+[2.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/ld_library_path_lib.sh'
+[2.221s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/bin'
+[2.221s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib/pkgconfig/robotiq_85_msgs.pc'
+[2.221s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib/python3.10/site-packages'
+[2.222s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/bin'
+[2.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.ps1'
+[2.223s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.dsv'
+[2.224s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.sh'
+[2.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.bash'
+[2.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.zsh'
+[2.227s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/colcon-core/packages/robotiq_85_msgs)
+[2.230s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_msgs)
+[2.231s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs' for CMake module files
+[2.232s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs' for CMake config files
+[2.234s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_msgs', 'cmake_prefix_path')
+[2.234s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/cmake_prefix_path.ps1'
+[2.235s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/cmake_prefix_path.dsv'
+[2.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/cmake_prefix_path.sh'
+[2.236s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib'
+[2.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_msgs', 'ld_library_path_lib')
+[2.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/ld_library_path_lib.ps1'
+[2.237s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/ld_library_path_lib.dsv'
+[2.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/hook/ld_library_path_lib.sh'
+[2.238s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/bin'
+[2.238s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib/pkgconfig/robotiq_85_msgs.pc'
+[2.239s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib/python3.10/site-packages'
+[2.239s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/bin'
+[2.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.ps1'
+[2.240s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.dsv'
+[2.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.sh'
+[2.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.bash'
+[2.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/robotiq_85_msgs/package.zsh'
+[2.245s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/share/colcon-core/packages/robotiq_85_msgs)
+[2.247s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_driver' with build type 'ament_python'
+[2.247s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_driver', 'ament_prefix_path')
+[2.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/hook/ament_prefix_path.ps1'
+[2.252s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/hook/ament_prefix_path.dsv'
+[2.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/hook/ament_prefix_path.sh'
+[2.255s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.255s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.880s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_driver'
+[2.880s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.881s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop': PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build --no-deps symlink_data
+[3.686s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/build --no-deps symlink_data
+[3.959s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_robot_coop', 'pythonpath_develop')
+[3.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/share/multi_robot_coop/hook/pythonpath_develop.ps1'
+[3.960s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop' returned '0': PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build --no-deps symlink_data
+[3.961s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/share/multi_robot_coop/hook/pythonpath_develop.dsv'
+[3.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/share/multi_robot_coop/hook/pythonpath_develop.sh'
+[3.962s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop' for CMake module files
+[3.963s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop' for CMake config files
+[3.964s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib'
+[3.964s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/bin'
+[3.964s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/pkgconfig/multi_robot_coop.pc'
+[3.965s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages'
+[3.965s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_robot_coop', 'pythonpath')
+[3.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/hook/pythonpath.ps1'
+[3.967s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/hook/pythonpath.dsv'
+[3.967s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/hook/pythonpath.sh'
+[3.968s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/bin'
+[3.969s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multi_robot_coop)
+[3.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/package.ps1'
+[3.971s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/package.dsv'
+[3.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/package.sh'
+[3.974s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/package.bash'
+[3.975s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/package.zsh'
+[3.976s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/colcon-core/packages/multi_robot_coop)
+[4.613s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_driver', 'pythonpath_develop')
+[4.614s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver' returned '0': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/build --no-deps symlink_data
+[4.614s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/share/robotiq_85_driver/hook/pythonpath_develop.ps1'
+[4.615s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/share/robotiq_85_driver/hook/pythonpath_develop.dsv'
+[4.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/share/robotiq_85_driver/hook/pythonpath_develop.sh'
+[4.616s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver' for CMake module files
+[4.617s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver' for CMake config files
+[4.618s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib'
+[4.618s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/bin'
+[4.618s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/pkgconfig/robotiq_85_driver.pc'
+[4.619s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages'
+[4.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_driver', 'pythonpath')
+[4.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/hook/pythonpath.ps1'
+[4.620s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/hook/pythonpath.dsv'
+[4.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/hook/pythonpath.sh'
+[4.621s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/bin'
+[4.621s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_driver)
+[4.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/package.ps1'
+[4.622s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/package.dsv'
+[4.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/package.sh'
+[4.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/package.bash'
+[4.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/robotiq_85_driver/package.zsh'
+[4.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/share/colcon-core/packages/robotiq_85_driver)
+[4.625s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_gripper' with build type 'ament_cmake'
+[4.625s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_gripper'
+[4.626s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.626s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:/opt/ros/humble LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper -- -j4 -l4
+[4.857s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper' returned '0': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:/opt/ros/humble LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper -- -j4 -l4
+[4.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:/opt/ros/humble LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper
+[4.891s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_gripper)
+[4.891s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper' for CMake module files
+[4.892s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper' returned '0': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description:/opt/ros/humble LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper
+[4.893s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper' for CMake config files
+[4.893s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_gripper', 'cmake_prefix_path')
+[4.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/hook/cmake_prefix_path.ps1'
+[4.894s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/hook/cmake_prefix_path.dsv'
+[4.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/hook/cmake_prefix_path.sh'
+[4.895s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/bin'
+[4.895s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/lib/pkgconfig/robotiq_85_gripper.pc'
+[4.895s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/lib/python3.10/site-packages'
+[4.896s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/bin'
+[4.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.ps1'
+[4.897s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.dsv'
+[4.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.sh'
+[4.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.bash'
+[4.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.zsh'
+[4.900s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/colcon-core/packages/robotiq_85_gripper)
+[4.901s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotiq_85_gripper)
+[4.901s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper' for CMake module files
+[4.902s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper' for CMake config files
+[4.903s] Level 1:colcon.colcon_core.shell:create_environment_hook('robotiq_85_gripper', 'cmake_prefix_path')
+[4.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/hook/cmake_prefix_path.ps1'
+[4.904s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/hook/cmake_prefix_path.dsv'
+[4.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/hook/cmake_prefix_path.sh'
+[4.905s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/bin'
+[4.905s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/lib/pkgconfig/robotiq_85_gripper.pc'
+[4.905s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/lib/python3.10/site-packages'
+[4.906s] Level 1:colcon.colcon_core.environment:checking '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/bin'
+[4.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.ps1'
+[4.908s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.dsv'
+[4.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.sh'
+[4.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.bash'
+[4.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/robotiq_85_gripper/package.zsh'
+[4.911s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_gripper/share/colcon-core/packages/robotiq_85_gripper)
+[4.911s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.912s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.912s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.912s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.955s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.955s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.955s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.955s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.956s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[4.956s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.956s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kishu/roboticslab-technical-project/ros2_ws/install/local_setup.ps1'
+[4.957s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kishu/roboticslab-technical-project/ros2_ws/install/_local_setup_util_ps1.py'
+[4.959s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kishu/roboticslab-technical-project/ros2_ws/install/setup.ps1'
+[4.960s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kishu/roboticslab-technical-project/ros2_ws/install/local_setup.sh'
+[4.961s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kishu/roboticslab-technical-project/ros2_ws/install/_local_setup_util_sh.py'
+[4.962s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kishu/roboticslab-technical-project/ros2_ws/install/setup.sh'
+[4.963s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kishu/roboticslab-technical-project/ros2_ws/install/local_setup.bash'
+[4.964s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kishu/roboticslab-technical-project/ros2_ws/install/setup.bash'
+[4.966s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kishu/roboticslab-technical-project/ros2_ws/install/local_setup.zsh'
+[4.967s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kishu/roboticslab-technical-project/ros2_ws/install/setup.zsh'

@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"Extras/Serialize/BulletFileLoader/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 41,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Extras/Serialize/BulletFileLoader/libBulletFileLoader.a"
+			],
+			"targetId" : "BulletFileLoader::@761a50bcf213c5235c76",
+			"targetIndex" : 20,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/bullet",
+			"paths" : 
+			[
+				"Extras/Serialize/BulletFileLoader"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "Extras/Serialize/BulletFileLoader",
+		"source" : "Extras/Serialize/BulletFileLoader"
+	}
+}

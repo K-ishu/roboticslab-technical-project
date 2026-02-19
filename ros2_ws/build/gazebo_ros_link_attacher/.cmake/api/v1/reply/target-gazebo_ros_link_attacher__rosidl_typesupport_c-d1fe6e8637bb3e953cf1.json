@@ -1,0 +1,638 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "libgazebo_ros_link_attacher__rosidl_typesupport_c.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"ament_execute_extensions",
+			"rosidl_generate_interfaces",
+			"_install",
+			"ament_cmake_symlink_install_targets",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"add_definitions",
+			"dart_traverse_components",
+			"dart_package_init",
+			"find_package",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"/opt/ros/humble/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c_generate_interfaces.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
+			"CMakeLists.txt",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/install.cmake",
+			"/usr/share/dart/cmake/DARTFindBoost.cmake",
+			"/usr/share/dart/cmake/dart_dartComponent.cmake",
+			"/usr/share/dart/cmake/DARTConfig.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake",
+			"/opt/ros/humble/share/gazebo_dev/cmake/gazebo_dev-extras.cmake",
+			"/opt/ros/humble/share/gazebo_dev/cmake/gazebo_devConfig.cmake",
+			"/opt/ros/humble/share/gazebo_ros/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/opt/ros/humble/share/gazebo_ros/cmake/gazebo_rosConfig.cmake",
+			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
+			"/opt/ros/humble/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
+			"/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 286,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 90,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 37,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 50,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 120,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 130,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 130,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 4
+			},
+			{
+				"command" : 12,
+				"file" : 3,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"file" : 13,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 13,
+				"line" : 41,
+				"parent" : 15
+			},
+			{
+				"file" : 12,
+				"parent" : 16
+			},
+			{
+				"command" : 12,
+				"file" : 12,
+				"line" : 21,
+				"parent" : 17
+			},
+			{
+				"file" : 11,
+				"parent" : 18
+			},
+			{
+				"command" : 1,
+				"file" : 11,
+				"line" : 41,
+				"parent" : 19
+			},
+			{
+				"file" : 10,
+				"parent" : 20
+			},
+			{
+				"command" : 12,
+				"file" : 10,
+				"line" : 3,
+				"parent" : 21
+			},
+			{
+				"file" : 9,
+				"parent" : 22
+			},
+			{
+				"command" : 12,
+				"file" : 9,
+				"line" : 166,
+				"parent" : 23
+			},
+			{
+				"file" : 8,
+				"parent" : 24
+			},
+			{
+				"command" : 11,
+				"file" : 8,
+				"line" : 181,
+				"parent" : 25
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 133,
+				"parent" : 26
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 73,
+				"parent" : 27
+			},
+			{
+				"file" : 7,
+				"parent" : 28
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 6,
+				"parent" : 29
+			},
+			{
+				"file" : 6,
+				"parent" : 30
+			},
+			{
+				"command" : 9,
+				"file" : 6,
+				"line" : 13,
+				"parent" : 31
+			},
+			{
+				"command" : 9,
+				"file" : 9,
+				"line" : 142,
+				"parent" : 23
+			},
+			{
+				"command" : 9,
+				"file" : 9,
+				"line" : 148,
+				"parent" : 23
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 16,
+				"parent" : 35
+			},
+			{
+				"command" : 12,
+				"file" : 16,
+				"line" : 21,
+				"parent" : 36
+			},
+			{
+				"file" : 15,
+				"parent" : 37
+			},
+			{
+				"command" : 1,
+				"file" : 15,
+				"line" : 41,
+				"parent" : 38
+			},
+			{
+				"file" : 14,
+				"parent" : 39
+			},
+			{
+				"command" : 9,
+				"file" : 14,
+				"line" : 25,
+				"parent" : 40
+			},
+			{
+				"command" : 13,
+				"file" : 3,
+				"line" : 42,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 100,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=c++17   -fPIC"
+				},
+				{
+					"backtrace" : 13,
+					"fragment" : "-Wall"
+				},
+				{
+					"fragment" : "-std=gnu++14"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 32,
+					"define" : "BOOST_TEST_DYN_LINK"
+				},
+				{
+					"backtrace" : 33,
+					"define" : "LIBBULLET_VERSION=3.05"
+				},
+				{
+					"backtrace" : 34,
+					"define" : "LIBBULLET_VERSION_GT_282"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
+				},
+				{
+					"define" : "ROSIDL_GENERATOR_C_BUILDING_DLL_gazebo_ros_link_attacher"
+				},
+				{
+					"backtrace" : 41,
+					"define" : "ROS_PACKAGE_NAME=\"gazebo_ros_link_attacher\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 42,
+					"path" : "/home/kishu/roboticslab-technical-project/ros2_ws/src/gazebo_ros_link_attacher/include"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rclcpp"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/gazebo-11"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/bullet"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/simbody"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/sdformat-9.7"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/ignition/math6"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/OGRE"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/OGRE/Terrain"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/OGRE/Paging"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/ignition/transport8"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/ignition/msgs5"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/ignition/common3"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/usr/include/ignition/fuel_tools4"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/ament_index_cpp"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/libstatistics_collector"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rcl"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rcpputils"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosgraph_msgs"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_cpp"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosidl_runtime_cpp"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rcl_yaml_param_parser"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/statistics_msgs"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/tracetools"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_fastrtps_c"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rmw"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_introspection_c"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_introspection_cpp"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/srv"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/rosidl_generator_c"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rcutils"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/builtin_interfaces"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_c"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rosidl_runtime_c"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/rosidl_typesupport_interface"
+				},
+				{
+					"backtrace" : 42,
+					"isSystem" : true,
+					"path" : "/opt/ros/humble/include/std_msgs"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					43
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 9,
+			"id" : "gazebo_ros_link_attacher__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "gazebo_ros_link_attacher__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher:/opt/ros/humble/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "libgazebo_ros_link_attacher__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/opt/ros/humble/lib/librosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/opt/ros/humble/lib/librosidl_runtime_c.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/ros/humble/lib/librcutils.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Wl,-rpath-link,/opt/ros/humble/lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "gazebo_ros_link_attacher__rosidl_typesupport_c",
+	"nameOnDisk" : "libgazebo_ros_link_attacher__rosidl_typesupport_c.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/rosidl_typesupport_c/gazebo_ros_link_attacher/srv/attach__type_support.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/rosidl_typesupport_c/gazebo_ros_link_attacher/srv/attach__type_support.cpp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

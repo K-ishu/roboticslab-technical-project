@@ -1,0 +1,295 @@
+[0.088s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake /home/kishu/roboticslab-technical-project/ros2_ws/src/gazebo_ros_link_attacher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher
+[0.582s] -- The C compiler identification is GNU 11.4.0
+[1.716s] -- The CXX compiler identification is GNU 11.4.0
+[2.369s] -- Detecting C compiler ABI info
+[3.099s] -- Detecting C compiler ABI info - done
+[3.135s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.136s] -- Detecting C compile features
+[3.146s] -- Detecting C compile features - done
+[3.168s] -- Detecting CXX compiler ABI info
+[3.757s] -- Detecting CXX compiler ABI info - done
+[3.839s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.840s] -- Detecting CXX compile features
+[3.850s] -- Detecting CXX compile features - done
+[3.875s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.871s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[5.313s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.535s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[6.098s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.130s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.191s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.276s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.330s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.586s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.603s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[10.112s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[13.141s] -- Found FastRTPS: /opt/ros/humble/include  
+[17.591s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[17.625s] -- Looking for pthread.h
+[17.961s] -- Looking for pthread.h - found
+[17.963s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[18.353s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[18.356s] -- Found Threads: TRUE  
+[18.529s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[18.564s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[18.572s] -- Checking for module 'bullet>=2.82'
+[18.620s] --   Found bullet, version 3.05
+[19.023s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[19.184s] -- Found assimp: /usr/include (found version "5.2.0") 
+[19.221s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[19.309s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[19.966s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[19.982s] -- Looking for ignition-math6 -- found version 6.15.1
+[20.011s] -- Searching for dependencies of ignition-math6
+[20.012s] -- Looking for OGRE...
+[20.014s] -- OGRE_PREFIX_WATCH changed.
+[20.036s] -- Checking for module 'OGRE'
+[20.101s] --   Found OGRE, version 1.9.0
+[20.215s] -- Found Ogre Ghadamon (1.9.0)
+[20.863s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[20.921s] -- Looking for OGRE_Paging...
+[21.492s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[21.493s] -- Looking for OGRE_Terrain...
+[22.152s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[22.152s] -- Looking for OGRE_Property...
+[22.655s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[22.655s] -- Looking for OGRE_RTShaderSystem...
+[23.441s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[23.441s] -- Looking for OGRE_Volume...
+[24.135s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[24.136s] -- Looking for OGRE_Overlay...
+[24.707s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[62.563s] -- Looking for ignition-math6 -- found version 6.15.1
+[62.576s] -- Looking for ignition-transport8 -- found version 8.2.1
+[62.577s] -- Searching for dependencies of ignition-transport8
+[64.181s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[66.103s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[66.110s] -- Checking for module 'libzmq >= 4'
+[66.155s] --   Found libzmq , version 4.3.4
+[66.279s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[66.351s] -- Checking for module 'uuid'
+[66.392s] --   Found uuid, version 2.37.2
+[66.479s] -- Found UUID: TRUE  
+[66.484s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[66.486s] -- Searching for dependencies of ignition-msgs5
+[68.166s] -- Looking for ignition-math6 -- found version 6.15.1
+[68.185s] -- Checking for module 'tinyxml2'
+[68.219s] --   Found tinyxml2, version 9.0.0
+[68.315s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[68.322s] -- Looking for ignition-common3 -- found version 3.14.0
+[68.323s] -- Searching for dependencies of ignition-common3
+[68.390s] -- Looking for dlfcn.h - found
+[68.434s] -- Looking for libdl - found
+[68.434s] -- Found DL: TRUE  
+[68.556s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[68.558s] -- Searching for <ignition-common3> component [graphics]
+[68.565s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[68.568s] -- Searching for dependencies of ignition-common3-graphics
+[68.570s] -- Looking for ignition-math6 -- found version 6.15.1
+[68.578s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[68.579s] -- Searching for dependencies of ignition-fuel_tools4
+[70.754s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[70.778s] -- Checking for module 'jsoncpp'
+[70.831s] --   Found jsoncpp, version 1.9.5
+[70.940s] -- Found JSONCPP: TRUE  
+[70.957s] -- Checking for module 'libzip'
+[70.997s] --   Found libzip, version 1.7.3
+[71.117s] -- Found ZIP: TRUE  
+[71.119s] -- Looking for ignition-common3 -- found version 3.14.0
+[71.123s] -- Looking for ignition-math6 -- found version 6.15.1
+[71.127s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[71.132s] -- Gazebo version: 11.10
+[71.134s] -- Checking for module 'tbb'
+[71.170s] --   Found tbb, version 2021.5.0
+[71.267s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[72.151s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[73.320s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[73.728s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[73.982s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[73.990s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[74.606s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[74.607s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[74.607s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[74.607s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[74.670s] -- Found PythonExtra: .so  
+[74.947s] -- Configuring done
+[75.349s] -- Generating done
+[75.408s] -- Build files have been written to: /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher
+[75.460s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake /home/kishu/roboticslab-technical-project/ros2_ws/src/gazebo_ros_link_attacher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher
+[75.464s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher -- -j4 -l4
+[75.618s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[76.444s] [  3%] Built target gazebo_ros_link_attacher__cpp
+[76.521s] [  3%] Built target ament_cmake_python_symlink_gazebo_ros_link_attacher
+[76.547s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[77.332s] [  9%] [32mBuilding CXX object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gazebo_ros_link_attacher/srv/detail/dds_fastrtps/attach__type_support.cpp.o[0m
+[78.700s] [ 12%] [32m[1mLinking CXX shared library libgazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cpp.so[0m
+[79.116s] [ 12%] Built target gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cpp
+[79.160s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[79.945s] [ 18%] [32mBuilding CXX object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gazebo_ros_link_attacher/srv/detail/attach__type_support.cpp.o[0m
+[81.096s] [ 21%] [32m[1mLinking CXX shared library libgazebo_ros_link_attacher__rosidl_typesupport_introspection_cpp.so[0m
+[81.346s] [ 21%] Built target gazebo_ros_link_attacher__rosidl_typesupport_introspection_cpp
+[82.131s] running egg_info
+[82.141s] creating gazebo_ros_link_attacher.egg-info
+[82.141s] writing gazebo_ros_link_attacher.egg-info/PKG-INFO
+[82.142s] writing dependency_links to gazebo_ros_link_attacher.egg-info/dependency_links.txt
+[82.143s] writing top-level names to gazebo_ros_link_attacher.egg-info/top_level.txt
+[82.144s] writing manifest file 'gazebo_ros_link_attacher.egg-info/SOURCES.txt'
+[82.151s] reading manifest file 'gazebo_ros_link_attacher.egg-info/SOURCES.txt'
+[82.153s] writing manifest file 'gazebo_ros_link_attacher.egg-info/SOURCES.txt'
+[82.242s] [ 21%] Built target ament_cmake_python_build_gazebo_ros_link_attacher_egg
+[82.263s] [ 24%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[82.939s] [ 27%] [32mBuilding CXX object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gazebo_ros_link_attacher/srv/attach__type_support.cpp.o[0m
+[83.698s] [ 30%] [32m[1mLinking CXX shared library libgazebo_ros_link_attacher__rosidl_typesupport_cpp.so[0m
+[83.922s] [ 30%] Built target gazebo_ros_link_attacher__rosidl_typesupport_cpp
+[83.947s] [ 33%] [34m[1mGenerating C code for ROS interfaces[0m
+[84.856s] [ 36%] [32mBuilding C object CMakeFiles/gazebo_ros_link_attacher__rosidl_generator_c.dir/rosidl_generator_c/gazebo_ros_link_attacher/srv/detail/attach__functions.c.o[0m
+[85.050s] [ 39%] [32m[1mLinking C shared library libgazebo_ros_link_attacher__rosidl_generator_c.so[0m
+[85.266s] [ 39%] Built target gazebo_ros_link_attacher__rosidl_generator_c
+[85.333s] [ 42%] [32mBuilding CXX object CMakeFiles/gazebo_ros_link_attacher_plugin.dir/src/gazebo_ros_link_attacher.cpp.o[0m
+[139.507s] [ 45%] [32m[1mLinking CXX shared library libgazebo_ros_link_attacher_plugin.so[0m
+[147.506s] [ 45%] Built target gazebo_ros_link_attacher_plugin
+[147.551s] [ 48%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[148.289s] [ 51%] [32mBuilding CXX object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_c.dir/rosidl_typesupport_c/gazebo_ros_link_attacher/srv/attach__type_support.cpp.o[0m
+[148.399s] [ 54%] [32m[1mLinking CXX shared library libgazebo_ros_link_attacher__rosidl_typesupport_c.so[0m
+[148.696s] [ 54%] Built target gazebo_ros_link_attacher__rosidl_typesupport_c
+[148.725s] [ 57%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[149.510s] [ 60%] [32mBuilding C object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gazebo_ros_link_attacher/srv/detail/attach__type_support.c.o[0m
+[149.639s] [ 63%] [32m[1mLinking C shared library libgazebo_ros_link_attacher__rosidl_typesupport_introspection_c.so[0m
+[149.853s] [ 63%] Built target gazebo_ros_link_attacher__rosidl_typesupport_introspection_c
+[149.895s] [ 66%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[150.599s] [ 69%] [32mBuilding CXX object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gazebo_ros_link_attacher/srv/detail/attach__type_support_c.cpp.o[0m
+[151.633s] [ 72%] [32m[1mLinking CXX shared library libgazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c.so[0m
+[152.043s] [ 72%] Built target gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c
+[152.087s] [ 72%] Built target gazebo_ros_link_attacher
+[152.151s] [ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[153.334s] [ 75%] Built target gazebo_ros_link_attacher__py
+[153.391s] [ 78%] [32mBuilding C object CMakeFiles/gazebo_ros_link_attacher__rosidl_generator_py.dir/rosidl_generator_py/gazebo_ros_link_attacher/srv/_attach_s.c.o[0m
+[153.728s] [ 81%] [32m[1mLinking C shared library rosidl_generator_py/gazebo_ros_link_attacher/libgazebo_ros_link_attacher__rosidl_generator_py.so[0m
+[153.945s] [ 81%] Built target gazebo_ros_link_attacher__rosidl_generator_py
+[154.000s] [ 84%] [32mBuilding C object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gazebo_ros_link_attacher/_gazebo_ros_link_attacher_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[154.302s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[154.520s] [ 87%] Built target gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c__pyext
+[154.580s] [ 90%] [32mBuilding C object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/gazebo_ros_link_attacher/_gazebo_ros_link_attacher_s.ep.rosidl_typesupport_c.c.o[0m
+[154.885s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[155.103s] [ 93%] Built target gazebo_ros_link_attacher__rosidl_typesupport_c__pyext
+[155.167s] [ 96%] [32mBuilding C object CMakeFiles/gazebo_ros_link_attacher__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/gazebo_ros_link_attacher/_gazebo_ros_link_attacher_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[155.446s] [100%] [32m[1mLinking C shared library rosidl_generator_py/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[155.702s] [100%] Built target gazebo_ros_link_attacher__rosidl_typesupport_introspection_c__pyext
+[155.743s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher -- -j4 -l4
+[155.748s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher
+[155.767s] -- Install configuration: ""
+[155.772s] -- Execute custom install script
+[155.775s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/ament_index/resource_index/rosidl_interfaces/gazebo_ros_link_attacher
+[155.799s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/msg/rosidl_generator_c__visibility_control.h
+[155.835s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/attach.h
+[155.851s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__functions.h
+[155.887s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__struct.h
+[155.904s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__type_support.h
+[155.929s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/library_path.sh
+[155.963s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/library_path.dsv
+[155.987s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[156.004s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__rosidl_typesupport_fastrtps_c.h
+[156.039s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/msg/rosidl_generator_cpp__visibility_control.hpp
+[156.080s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/attach.hpp
+[156.099s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__builder.hpp
+[156.126s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__struct.hpp
+[156.146s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__traits.hpp
+[156.170s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__type_support.hpp
+[156.190s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[156.216s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__rosidl_typesupport_fastrtps_cpp.hpp
+[156.238s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[156.264s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__rosidl_typesupport_introspection_c.h
+[156.284s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/gazebo_ros_link_attacher/srv/detail/attach__rosidl_typesupport_introspection_cpp.hpp
+[156.305s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/pythonpath.sh
+[156.339s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/pythonpath.dsv
+[156.375s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher-0.0.0-py3.10.egg-info/PKG-INFO
+[156.398s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher-0.0.0-py3.10.egg-info/SOURCES.txt
+[156.429s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher-0.0.0-py3.10.egg-info/dependency_links.txt
+[156.449s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher-0.0.0-py3.10.egg-info/top_level.txt
+[156.480s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/__init__.py
+[156.499s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/_gazebo_ros_link_attacher_s.ep.rosidl_typesupport_c.c
+[156.527s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/_gazebo_ros_link_attacher_s.ep.rosidl_typesupport_fastrtps_c.c
+[156.548s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/_gazebo_ros_link_attacher_s.ep.rosidl_typesupport_introspection_c.c
+[156.575s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[156.594s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[156.620s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[156.647s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/libgazebo_ros_link_attacher__rosidl_generator_py.so
+[156.669s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/srv/__init__.py
+[156.698s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/srv/_attach.py
+[156.714s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/srv/_attach_s.c
+[156.751s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[156.752s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[156.752s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/gazebo_ros_link_attacher_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[156.754s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/srv/Attach.idl
+[156.778s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/srv/Attach.srv
+[156.798s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/srv/Attach_Request.msg
+[156.821s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/srv/Attach_Response.msg
+[156.849s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher_plugin.so
+[156.879s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/gazebo_ros_link_attacher/demo.py
+[156.901s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/gazebo_ros_link_attacher/demo_multiple.py
+[156.918s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/gazebo_ros_link_attacher/spawn_models.py
+[156.946s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/gazebo_ros_link_attacher/attach.py
+[156.964s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/gazebo_ros_link_attacher/detach.py
+[156.990s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/launch/test_attacher.py
+[157.008s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/worlds/test_attacher.world
+[157.027s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/ament_index/resource_index/package_run_dependencies/gazebo_ros_link_attacher
+[157.057s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/ament_index/resource_index/parent_prefix_path/gazebo_ros_link_attacher
+[157.078s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/ament_prefix_path.sh
+[157.104s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/ament_prefix_path.dsv
+[157.123s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/path.sh
+[157.150s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/environment/path.dsv
+[157.171s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/local_setup.bash
+[157.192s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/local_setup.sh
+[157.218s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/local_setup.zsh
+[157.239s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/local_setup.dsv
+[157.267s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.dsv
+[157.295s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/ament_index/resource_index/packages/gazebo_ros_link_attacher
+[157.317s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/rosidl_cmake-extras.cmake
+[157.334s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/ament_cmake_export_dependencies-extras.cmake
+[157.358s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/ament_cmake_export_include_directories-extras.cmake
+[157.381s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/ament_cmake_export_libraries-extras.cmake
+[157.409s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/ament_cmake_export_targets-extras.cmake
+[157.428s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[157.467s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[157.497s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacherConfig.cmake
+[157.528s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacherConfig-version.cmake
+[157.543s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/package.xml
+[157.563s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_generator_c.so
+[157.565s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_generator_c.so" to ""
+[157.566s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c.so
+[157.572s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_fastrtps_c.so" to ""
+[157.572s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cpp.so
+[157.572s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cpp.so" to ""
+[157.572s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_introspection_c.so
+[157.574s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_introspection_c.so" to ""
+[157.575s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_c.so
+[157.577s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_c.so" to ""
+[157.579s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_introspection_cpp.so
+[157.580s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_introspection_cpp.so" to ""
+[157.581s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_cpp.so
+[157.582s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_typesupport_cpp.so" to ""
+[157.691s] Listing '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher'...
+[157.691s] Compiling '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/__init__.py'...
+[157.691s] Listing '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/srv'...
+[157.692s] Compiling '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/srv/__init__.py'...
+[157.692s] Compiling '/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages/gazebo_ros_link_attacher/srv/_attach.py'...
+[157.704s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_generator_py.so
+[157.705s] -- Set runtime path of "/home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/lib/libgazebo_ros_link_attacher__rosidl_generator_py.so" to ""
+[157.706s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_generator_cExport.cmake
+[157.706s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_generator_cExport-noconfig.cmake
+[157.706s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cExport.cmake
+[157.707s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[157.707s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_generator_cppExport.cmake
+[157.707s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cppExport.cmake
+[157.708s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[157.708s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_introspection_cExport.cmake
+[157.708s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[157.708s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_cExport.cmake
+[157.708s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_cExport-noconfig.cmake
+[157.709s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_introspection_cppExport.cmake
+[157.709s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[157.710s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_cppExport.cmake
+[157.710s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/gazebo_ros_link_attacher__rosidl_typesupport_cppExport-noconfig.cmake
+[157.710s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_generator_pyExport.cmake
+[157.711s] -- Installing: /home/kishu/roboticslab-technical-project/ros2_ws/install/gazebo_ros_link_attacher/share/gazebo_ros_link_attacher/cmake/export_gazebo_ros_link_attacher__rosidl_generator_pyExport-noconfig.cmake
+[157.739s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/roboticslab_project:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher

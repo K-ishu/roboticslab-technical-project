@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/App_obj2sdf.dir/obj2sdf.cpp.o CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.cpp.o CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp.o -o App_obj2sdf  ../../src/Bullet3Common/libBullet3Common.a 

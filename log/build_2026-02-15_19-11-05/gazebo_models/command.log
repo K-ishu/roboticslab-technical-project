@@ -1,0 +1,4 @@
+Invoking command in '/home/kishu/roboticslab-technical-project/build/gazebo_models': /usr/bin/cmake /home/kishu/roboticslab-technical-project/gazebo_models -DCMAKE_INSTALL_PREFIX=/home/kishu/roboticslab-technical-project/install/gazebo_models
+Invoked command in '/home/kishu/roboticslab-technical-project/build/gazebo_models' returned '0': /usr/bin/cmake /home/kishu/roboticslab-technical-project/gazebo_models -DCMAKE_INSTALL_PREFIX=/home/kishu/roboticslab-technical-project/install/gazebo_models
+Invoking command in '/home/kishu/roboticslab-technical-project/build/gazebo_models': /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/build/gazebo_models -- -j4 -l4
+Invoked command in '/home/kishu/roboticslab-technical-project/build/gazebo_models' returned '2': /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/build/gazebo_models -- -j4 -l4

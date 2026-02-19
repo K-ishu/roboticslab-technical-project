@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/kishu/roboticslab-technical-project/ros2_ws/build/gazebo_ros_link_attacher/libgazebo_ros_link_attacher_plugin.so" "TARGETS" "gazebo_ros_link_attacher_plugin" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

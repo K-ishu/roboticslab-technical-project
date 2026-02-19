@@ -1,0 +1,22 @@
+[1.436s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/build --no-deps symlink_data
+[1.949s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.949s]   warnings.warn(
+[1.991s] running develop
+[2.313s] running egg_info
+[2.313s] writing robotiq_85_driver.egg-info/PKG-INFO
+[2.314s] writing dependency_links to robotiq_85_driver.egg-info/dependency_links.txt
+[2.314s] writing entry points to robotiq_85_driver.egg-info/entry_points.txt
+[2.315s] writing requirements to robotiq_85_driver.egg-info/requires.txt
+[2.315s] writing top-level names to robotiq_85_driver.egg-info/top_level.txt
+[2.318s] reading manifest file 'robotiq_85_driver.egg-info/SOURCES.txt'
+[2.320s] writing manifest file 'robotiq_85_driver.egg-info/SOURCES.txt'
+[2.322s] running build_ext
+[2.322s] Creating /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages/robotiq-85-driver.egg-link (link to .)
+[2.324s] Installing robotiq_85_driver script to /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/robotiq_85_driver
+[2.324s] Installing robotiq_85_test script to /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/robotiq_85_driver
+[2.324s] Installing robotiq_85_test_close script to /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/robotiq_85_driver
+[2.325s] Installing single_robotiq_85_action_server script to /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/robotiq_85_driver
+[2.325s] 
+[2.325s] Installed /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver
+[2.325s] running symlink_data
+[2.364s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver' returned '0': AMENT_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs LD_LIBRARY_PATH=/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver/lib/python3.10/site-packages:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_driver/build --no-deps symlink_data

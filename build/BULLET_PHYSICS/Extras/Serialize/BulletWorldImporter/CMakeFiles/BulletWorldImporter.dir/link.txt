@@ -1,0 +1,2 @@
+/usr/bin/ar qc libBulletWorldImporter.a CMakeFiles/BulletWorldImporter.dir/btMultiBodyWorldImporter.cpp.o CMakeFiles/BulletWorldImporter.dir/btBulletWorldImporter.cpp.o CMakeFiles/BulletWorldImporter.dir/btWorldImporter.cpp.o
+/usr/bin/ranlib libBulletWorldImporter.a

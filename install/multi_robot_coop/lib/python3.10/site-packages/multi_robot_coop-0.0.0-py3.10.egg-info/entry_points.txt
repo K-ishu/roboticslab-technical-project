@@ -1,0 +1,8 @@
+[console_scripts]
+arm_controller = multi_robot_coop.arm_controller:main
+arm_coordinator = multi_robot_coop.arm_coordinator:main
+arm_real_controller = multi_robot_coop.arm_real_controller:main
+scenario_coordinator = multi_robot_coop.scenario_coordinator:main
+tb3_controller = multi_robot_coop.tb3_controller:main
+tb3_coordinator = multi_robot_coop.tb3_coordinator:main
+

@@ -1,0 +1,1 @@
+/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_gripper/ament_cmake_core/robotiq_85_gripperConfig-version.cmake

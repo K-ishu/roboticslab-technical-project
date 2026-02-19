@@ -1,0 +1,55 @@
+running develop
+Removing /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi-robot-coop.egg-link (link to .)
+running egg_info
+writing ../../build/multi_robot_coop/multi_robot_coop.egg-info/PKG-INFO
+writing dependency_links to ../../build/multi_robot_coop/multi_robot_coop.egg-info/dependency_links.txt
+writing entry points to ../../build/multi_robot_coop/multi_robot_coop.egg-info/entry_points.txt
+writing requirements to ../../build/multi_robot_coop/multi_robot_coop.egg-info/requires.txt
+writing top-level names to ../../build/multi_robot_coop/multi_robot_coop.egg-info/top_level.txt
+reading manifest file '../../build/multi_robot_coop/multi_robot_coop.egg-info/SOURCES.txt'
+writing manifest file '../../build/multi_robot_coop/multi_robot_coop.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build
+creating /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib
+creating /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/arm_coordinator.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/tb3_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/tb3_coordinator.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/scenario_coordinator.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+copying multi_robot_coop/arm_real_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop
+running install
+running install_lib
+creating /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/__init__.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/arm_coordinator.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/tb3_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/tb3_coordinator.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/arm_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/scenario_coordinator.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+copying /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build/lib/multi_robot_coop/arm_real_controller.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/arm_coordinator.py to arm_coordinator.cpython-310.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/tb3_controller.py to tb3_controller.cpython-310.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/tb3_coordinator.py to tb3_coordinator.cpython-310.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/arm_controller.py to arm_controller.cpython-310.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/scenario_coordinator.py to scenario_coordinator.cpython-310.pyc
+byte-compiling /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/arm_real_controller.py to arm_real_controller.cpython-310.pyc
+running install_data
+copying resource/multi_robot_coop -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/ament_index/resource_index/packages
+copying package.xml -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop
+copying launch/scenario.launch.py -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/launch
+copying config/iiwa_controllers.yaml -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/config
+copying config/iiwa_rsp.yaml -> /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/share/multi_robot_coop/config
+running install_egg_info
+Copying ../../build/multi_robot_coop/multi_robot_coop.egg-info to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop-0.0.0-py3.10.egg-info
+running install_scripts
+Installing arm_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+Installing arm_coordinator script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+Installing arm_real_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+Installing scenario_coordinator script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+Installing tb3_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+Installing tb3_coordinator script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+writing list of installed files to '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/install.log'

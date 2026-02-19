@@ -1,0 +1,328 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "examples/RobotSimulator/App_HelloBulletRobotics"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"TARGET_LINK_LIBRARIES",
+			"ADD_DEFINITIONS",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"examples/RobotSimulator/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 136,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 142,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 399,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 248,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 54,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "BT_ENABLE_CLSOCKET"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "BT_USE_EGL"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "GLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "GLEW_INIT_OPENGL11_FUNCTIONS=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "GLEW_STATIC"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_GRAPHICAL_BENCHMARK"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "_LINUX"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 11,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/src"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/SharedMemory"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs/enet/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs/clsocket/src"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/btgui/OpenGLWindow/GlewWindows"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "BulletInverseDynamicsUtils::@a9f69f575b4b2158bc47"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletRobotics::@280136a33acd292963da"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletFileLoader::@761a50bcf213c5235c76"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletWorldImporter::@ed740352b70fd831a89a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletInverseDynamics::@15072e80ea46bab336f3"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletSoftBody::@e7ea131c60ab58985534"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletCollision::@9fd34a691297a724da5d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletDynamics::@86ce932a70e083dfbd6a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "LinearMath::@48487d122fdd2aa49150"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Bullet3Common::@2e6e09163ea7a5f56c5d"
+		}
+	],
+	"id" : "App_HelloBulletRobotics::@d0b83afb9805b4250b9c",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/BulletRobotics/libBulletRobotics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/Serialize/BulletFileLoader/libBulletFileLoader.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/Serialize/BulletWorldImporter/libBulletWorldImporter.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletSoftBody/libBulletSoftBody.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletDynamics/libBulletDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletCollision/libBulletCollision.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/InverseDynamics/libBulletInverseDynamicsUtils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletInverseDynamics/libBulletInverseDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/Bullet3Common/libBullet3Common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "App_HelloBulletRobotics",
+	"nameOnDisk" : "App_HelloBulletRobotics",
+	"paths" : 
+	{
+		"build" : "examples/RobotSimulator",
+		"source" : "examples/RobotSimulator"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/RobotSimulator/HelloBulletRobotics.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

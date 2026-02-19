@@ -1,0 +1,7 @@
+{
+  "package_name": "robotiq_85_msgs",
+  "non_idl_tuples": [
+    "/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_msgs:msg/GripperCmd.msg",
+    "/home/kishu/roboticslab-technical-project/ros2_ws/src/robotiq_85_gripper/robotiq_85_msgs:msg/GripperStat.msg"
+  ]
+}

@@ -1,0 +1,489 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "examples/RobotSimulator/App_RobotSimulator"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"ADD_EXECUTABLE",
+			"TARGET_LINK_LIBRARIES",
+			"SET_TARGET_PROPERTIES",
+			"ADD_DEFINITIONS",
+			"INCLUDE_DIRECTORIES"
+		],
+		"files" : 
+		[
+			"examples/RobotSimulator/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 399,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 248,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 54,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "B3_USE_ROBOTSIM_GUI"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "BT_ENABLE_CLSOCKET"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "BT_USE_EGL"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "GLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "GLEW_INIT_OPENGL11_FUNCTIONS=1"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "GLEW_STATIC"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "USE_GRAPHICAL_BENCHMARK"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "_LINUX"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/src"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/SharedMemory"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs/enet/include"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/examples/ThirdPartyLibs/clsocket/src"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/home/kishu/roboticslab-technical-project/models/bullet3/btgui/OpenGLWindow/GlewWindows"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				3,
+				5,
+				6,
+				7,
+				8,
+				9,
+				15,
+				16,
+				17
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "BulletExampleBrowserLib::@d330fae0f4836adb95cb"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "gwen::@89b993e6c371d7f7676d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "OpenGLWindow::@b539395cd4926c9e90a2"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletInverseDynamicsUtils::@a9f69f575b4b2158bc47"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletRobotics::@280136a33acd292963da"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletFileLoader::@761a50bcf213c5235c76"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletWorldImporter::@ed740352b70fd831a89a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletInverseDynamics::@15072e80ea46bab336f3"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletSoftBody::@e7ea131c60ab58985534"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletCollision::@9fd34a691297a724da5d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "BulletDynamics::@86ce932a70e083dfbd6a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "LinearMath::@48487d122fdd2aa49150"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Bullet3Common::@2e6e09163ea7a5f56c5d"
+		}
+	],
+	"id" : "App_RobotSimulator::@d0b83afb9805b4250b9c",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/BulletRobotics/libBulletRobotics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../ExampleBrowser/libBulletExampleBrowserLib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/Serialize/BulletFileLoader/libBulletFileLoader.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/Serialize/BulletWorldImporter/libBulletWorldImporter.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletSoftBody/libBulletSoftBody.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletDynamics/libBulletDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletCollision/libBulletCollision.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../Extras/InverseDynamics/libBulletInverseDynamicsUtils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/BulletInverseDynamics/libBulletInverseDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/LinearMath/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../OpenGLWindow/libOpenGLWindow.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../ThirdPartyLibs/Gwen/libgwen.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../../src/Bullet3Common/libBullet3Common.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "App_RobotSimulator",
+	"nameOnDisk" : "App_RobotSimulator",
+	"paths" : 
+	{
+		"build" : "examples/RobotSimulator",
+		"source" : "examples/RobotSimulator"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				3,
+				5,
+				6,
+				7,
+				8,
+				9,
+				15,
+				16,
+				17
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2,
+				4,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/RobotSimulator/RobotSimulatorMain.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/RobotSimulator/b3RobotSimulatorClientAPI.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/RobotSimulator/MinitaurSetup.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/RobotSimulator/MinitaurSetup.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/ExampleBrowser/InProcessExampleBrowser.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/GraphicsServerExample.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/GraphicsClientExample.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/RemoteGUIHelper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/RemoteGUIHelperTCP.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsServerExample.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsClientExample.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/RemoteGUIHelper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsSharedMemoryCommands.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "examples/SharedMemory/GraphicsSharedMemoryPublic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/PhysicsServerExample.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/PhysicsServerExampleBullet2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

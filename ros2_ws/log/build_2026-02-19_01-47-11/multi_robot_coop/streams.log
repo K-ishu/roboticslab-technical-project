@@ -1,0 +1,22 @@
+[2.044s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop': PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build --no-deps symlink_data
+[2.542s] running develop
+[2.942s] running egg_info
+[2.942s] writing multi_robot_coop.egg-info/PKG-INFO
+[2.942s] writing dependency_links to multi_robot_coop.egg-info/dependency_links.txt
+[2.943s] writing entry points to multi_robot_coop.egg-info/entry_points.txt
+[2.944s] writing requirements to multi_robot_coop.egg-info/requires.txt
+[2.944s] writing top-level names to multi_robot_coop.egg-info/top_level.txt
+[2.947s] reading manifest file 'multi_robot_coop.egg-info/SOURCES.txt'
+[2.949s] writing manifest file 'multi_robot_coop.egg-info/SOURCES.txt'
+[2.951s] running build_ext
+[2.952s] Creating /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages/multi-robot-coop.egg-link (link to .)
+[2.954s] Installing arm_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+[2.954s] Installing arm_coordinator script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+[2.955s] Installing arm_real_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+[2.955s] Installing scenario_coordinator script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+[2.955s] Installing tb3_controller script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+[2.956s] Installing tb3_coordinator script to /home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/multi_robot_coop
+[2.956s] 
+[2.957s] Installed /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop
+[2.957s] running symlink_data
+[3.008s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop' returned '0': PYTHONPATH=/home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kishu/roboticslab-technical-project/ros2_ws/build/multi_robot_coop/build --no-deps symlink_data

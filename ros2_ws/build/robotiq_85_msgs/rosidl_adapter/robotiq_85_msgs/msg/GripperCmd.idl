@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from robotiq_85_msgs/msg/GripperCmd.msg
+// generated code does not contain a copyright notice
+
+
+module robotiq_85_msgs {
+  module msg {
+    struct GripperCmd {
+      boolean emergency_release;
+
+      uint32 emergency_release_dir;
+
+      boolean stop;
+
+      float position;
+
+      float speed;
+
+      float force;
+    };
+  };
+};

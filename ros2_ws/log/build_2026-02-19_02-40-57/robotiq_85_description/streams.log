@@ -1,0 +1,44 @@
+[0.040s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description -- -j4 -l4
+[1.094s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --build /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description -- -j4 -l4
+[1.114s] Invoking command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description
+[1.132s] -- Install configuration: ""
+[1.133s] -- Execute custom install script
+[1.133s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/config/view_gripper.rviz
+[1.134s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/launch/view_gripper.launch.py
+[1.135s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/collision/robotiq_85_base_link.stl
+[1.135s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/collision/robotiq_85_finger_link.stl
+[1.135s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/collision/robotiq_85_finger_tip_link.stl
+[1.136s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/collision/robotiq_85_inner_knuckle_link.stl
+[1.136s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/collision/robotiq_85_knuckle_link.stl
+[1.137s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/collision/ur_to_robotiq_adapter.stl
+[1.137s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/visual/robotiq_85_base_link.dae
+[1.137s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/visual/robotiq_85_finger_link.dae
+[1.138s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/visual/robotiq_85_finger_tip_link.dae
+[1.139s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/visual/robotiq_85_inner_knuckle_link.dae
+[1.139s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/visual/robotiq_85_knuckle_link.dae
+[1.143s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/meshes/visual/ur_to_robotiq_adapter.dae
+[1.143s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/left_robotiq_85_gripper.urdf.xacro
+[1.144s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/right_robotiq_85_gripper.urdf.xacro
+[1.144s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/robotiq_85_gripper.ros2_control.xacro
+[1.144s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/robotiq_85_gripper.transmission.xacro
+[1.144s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/robotiq_85_gripper.urdf.xacro
+[1.144s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/robotiq_85_gripper_macro.urdf.xacro
+[1.144s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/robotiq_85_gripper_sim_base.urdf.xacro
+[1.145s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/robotiq_arg85_description.urdf.xacro
+[1.145s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/urdf/ur_to_robotiq_adapter.urdf.xacro
+[1.145s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/ament_index/resource_index/package_run_dependencies/robotiq_85_description
+[1.145s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/ament_index/resource_index/parent_prefix_path/robotiq_85_description
+[1.145s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/environment/ament_prefix_path.sh
+[1.145s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/environment/ament_prefix_path.dsv
+[1.146s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/environment/path.sh
+[1.146s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/environment/path.dsv
+[1.146s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/local_setup.bash
+[1.146s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/local_setup.sh
+[1.146s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/local_setup.zsh
+[1.147s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/local_setup.dsv
+[1.147s] -- Symlinking: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.dsv
+[1.167s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/ament_index/resource_index/packages/robotiq_85_description
+[1.168s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/cmake/robotiq_85_descriptionConfig.cmake
+[1.168s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/cmake/robotiq_85_descriptionConfig-version.cmake
+[1.168s] -- Up-to-date symlink: /home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_description/share/robotiq_85_description/package.xml
+[1.173s] Invoked command in '/home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kishu/roboticslab-technical-project/ros2_ws/install/robotiq_85_driver:/home/kishu/roboticslab-technical-project/ros2_ws/install/multi_robot_coop:/opt/ros/humble /usr/bin/cmake --install /home/kishu/roboticslab-technical-project/ros2_ws/build/robotiq_85_description

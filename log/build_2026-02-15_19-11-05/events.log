@@ -1,0 +1,258 @@
+[0.000000] (-) TimerEvent: {}
+[0.000259] (BULLET_PHYSICS) JobQueued: {'identifier': 'BULLET_PHYSICS', 'dependencies': OrderedDict()}
+[0.000371] (gazebo_models) JobQueued: {'identifier': 'gazebo_models', 'dependencies': OrderedDict()}
+[0.000463] (multi_robot_coop) JobQueued: {'identifier': 'multi_robot_coop', 'dependencies': OrderedDict()}
+[0.000558] (roboticslab_project) JobQueued: {'identifier': 'roboticslab_project', 'dependencies': OrderedDict()}
+[0.001138] (BULLET_PHYSICS) JobStarted: {'identifier': 'BULLET_PHYSICS'}
+[0.012512] (gazebo_models) JobStarted: {'identifier': 'gazebo_models'}
+[0.024653] (multi_robot_coop) JobStarted: {'identifier': 'multi_robot_coop'}
+[0.039067] (roboticslab_project) JobStarted: {'identifier': 'roboticslab_project'}
+[0.058041] (BULLET_PHYSICS) JobProgress: {'identifier': 'BULLET_PHYSICS', 'progress': 'cmake'}
+[0.062015] (BULLET_PHYSICS) Command: {'cmd': ['/usr/bin/cmake', '/home/kishu/roboticslab-technical-project/models/bullet3', '-DCMAKE_INSTALL_PREFIX=/home/kishu/roboticslab-technical-project/install/BULLET_PHYSICS'], 'cwd': '/home/kishu/roboticslab-technical-project/build/BULLET_PHYSICS', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kishu'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kishu'), ('OLDPWD', '/home/kishu'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kishu'), ('NAME', 'DESKTOP-07TM2Q3'), ('WSL_INTEROP', '/run/WSL/1842_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/kishu/roboticslab-technical-project/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/kishu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu22.04LTS_2204.5.10021.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Mohamad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mohamad/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Mohamad/AppData/Local/GitHubDesktop/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/kishu/roboticslab-technical-project/build/BULLET_PHYSICS'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', '')]), 'shell': False}
+[0.073674] (gazebo_models) JobProgress: {'identifier': 'gazebo_models', 'progress': 'cmake'}
+[0.077458] (gazebo_models) Command: {'cmd': ['/usr/bin/cmake', '/home/kishu/roboticslab-technical-project/gazebo_models', '-DCMAKE_INSTALL_PREFIX=/home/kishu/roboticslab-technical-project/install/gazebo_models'], 'cwd': '/home/kishu/roboticslab-technical-project/build/gazebo_models', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kishu'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kishu'), ('OLDPWD', '/home/kishu'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kishu'), ('NAME', 'DESKTOP-07TM2Q3'), ('WSL_INTEROP', '/run/WSL/1842_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/kishu/roboticslab-technical-project/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/kishu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu22.04LTS_2204.5.10021.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Mohamad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mohamad/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Mohamad/AppData/Local/GitHubDesktop/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/kishu/roboticslab-technical-project/build/gazebo_models'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', '')]), 'shell': False}
+[0.099311] (-) TimerEvent: {}
+[0.199809] (-) TimerEvent: {}
+[0.300605] (-) TimerEvent: {}
+[0.401194] (-) TimerEvent: {}
+[0.501797] (-) TimerEvent: {}
+[0.602273] (-) TimerEvent: {}
+[0.702770] (-) TimerEvent: {}
+[0.803339] (-) TimerEvent: {}
+[0.904306] (BULLET_PHYSICS) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.906286] (-) TimerEvent: {}
+[0.907754] (gazebo_models) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.909603] (gazebo_models) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.911823] (gazebo_models) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.912081] (gazebo_models) StderrLine: {'line': b'  CMake.\n'}
+[0.912256] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.912398] (gazebo_models) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.912549] (gazebo_models) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.912664] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.912875] (gazebo_models) StderrLine: {'line': b'\x1b[0m\n'}
+[1.006562] (-) TimerEvent: {}
+[1.107268] (-) TimerEvent: {}
+[1.207381] (gazebo_models) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.207867] (-) TimerEvent: {}
+[1.208323] (BULLET_PHYSICS) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.308030] (-) TimerEvent: {}
+[1.404316] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.404650] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.408184] (-) TimerEvent: {}
+[1.509282] (-) TimerEvent: {}
+[1.610814] (-) TimerEvent: {}
+[1.644279] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.645081] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.661023] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.661579] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.667246] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.668395] (gazebo_models) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.668902] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.672158] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.680159] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.681543] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.710973] (-) TimerEvent: {}
+[1.811546] (-) TimerEvent: {}
+[1.920017] (-) TimerEvent: {}
+[1.960716] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.966918] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.986025] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.987057] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.989617] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.993243] (BULLET_PHYSICS) StderrLine: {'line': b'\x1b[0mLinux\x1b[0m\n'}
+[1.995263] (gazebo_models) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.996394] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.998716] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.020177] (-) TimerEvent: {}
+[2.120672] (-) TimerEvent: {}
+[2.192233] (gazebo_models) StdoutLine: {'line': b'-- Install path: /home/kishu/roboticslab-technical-project/install/gazebo_models/models\n'}
+[2.220913] (-) TimerEvent: {}
+[2.223379] (gazebo_models) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.321156] (-) TimerEvent: {}
+[2.424312] (-) TimerEvent: {}
+[2.524943] (-) TimerEvent: {}
+[2.625560] (-) TimerEvent: {}
+[2.732451] (-) TimerEvent: {}
+[2.799636] (BULLET_PHYSICS) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindOpenGL.cmake:315 (message):\n'}
+[2.800110] (BULLET_PHYSICS) StderrLine: {'line': b'  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when\n'}
+[2.800372] (BULLET_PHYSICS) StderrLine: {'line': b'  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the\n'}
+[2.800620] (BULLET_PHYSICS) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[2.800815] (BULLET_PHYSICS) StderrLine: {'line': b'\n'}
+[2.801069] (BULLET_PHYSICS) StderrLine: {'line': b'  FindOpenGL found both a legacy GL library:\n'}
+[2.801315] (BULLET_PHYSICS) StderrLine: {'line': b'\n'}
+[2.801472] (BULLET_PHYSICS) StderrLine: {'line': b'    OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so\n'}
+[2.801601] (BULLET_PHYSICS) StderrLine: {'line': b'\n'}
+[2.801703] (BULLET_PHYSICS) StderrLine: {'line': b'  and GLVND libraries for OpenGL and GLX:\n'}
+[2.801813] (BULLET_PHYSICS) StderrLine: {'line': b'\n'}
+[2.801994] (BULLET_PHYSICS) StderrLine: {'line': b'    OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so\n'}
+[2.802157] (BULLET_PHYSICS) StderrLine: {'line': b'    OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so\n'}
+[2.802315] (BULLET_PHYSICS) StderrLine: {'line': b'\n'}
+[2.802495] (BULLET_PHYSICS) StderrLine: {'line': b'  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for\n'}
+[2.802695] (BULLET_PHYSICS) StderrLine: {'line': b'  compatibility with CMake 3.10 and below the legacy GL library will be used.\n'}
+[2.802850] (BULLET_PHYSICS) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.803008] (BULLET_PHYSICS) StderrLine: {'line': b'  CMakeLists.txt:312 (FIND_PACKAGE)\n'}
+[2.803159] (BULLET_PHYSICS) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.804227] (BULLET_PHYSICS) StderrLine: {'line': b'\x1b[0m\n'}
+[2.813451] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   \n'}
+[2.815986] (BULLET_PHYSICS) StderrLine: {'line': b'\x1b[0mOPENGL FOUND\x1b[0m\n'}
+[2.816674] (BULLET_PHYSICS) StderrLine: {'line': b'\x1b[0m/usr/lib/x86_64-linux-gnu/libGL.so/usr/lib/x86_64-linux-gnu/libGLU.so\x1b[0m\n'}
+[2.833127] (-) TimerEvent: {}
+[2.854578] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.933617] (-) TimerEvent: {}
+[2.945943] (gazebo_models) StdoutLine: {'line': b'-- Generating done\n'}
+[2.993944] (roboticslab_project) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/roboticslab_project', 'build', '--build-base', '/home/kishu/roboticslab-technical-project/build/roboticslab_project/build', 'install', '--record', '/home/kishu/roboticslab-technical-project/build/roboticslab_project/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/kishu/roboticslab-technical-project/ros2_ws/src/roboticslab_project', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kishu', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/kishu', 'OLDPWD': '/home/kishu', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'kishu', 'NAME': 'DESKTOP-07TM2Q3', 'WSL_INTEROP': '/run/WSL/1842_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/home/kishu/roboticslab-technical-project/models::/opt/ros/humble/share/turtlebot3_gazebo/models', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/kishu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu22.04LTS_2204.5.10021.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Mohamad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mohamad/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Mohamad/AppData/Local/GitHubDesktop/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/kishu/roboticslab-technical-project/build/roboticslab_project', 'TURTLEBOT3_MODEL': 'waffle_pi', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kishu/roboticslab-technical-project/build/roboticslab_project/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[3.006508] (multi_robot_coop) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/multi_robot_coop', 'build', '--build-base', '/home/kishu/roboticslab-technical-project/build/multi_robot_coop/build', 'install', '--record', '/home/kishu/roboticslab-technical-project/build/multi_robot_coop/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/kishu/roboticslab-technical-project/ros2_ws/src/multi_robot_coop', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kishu', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/kishu', 'OLDPWD': '/home/kishu', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'kishu', 'NAME': 'DESKTOP-07TM2Q3', 'WSL_INTEROP': '/run/WSL/1842_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/home/kishu/roboticslab-technical-project/models::/opt/ros/humble/share/turtlebot3_gazebo/models', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/kishu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu22.04LTS_2204.5.10021.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Mohamad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mohamad/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Mohamad/AppData/Local/GitHubDesktop/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/kishu/roboticslab-technical-project/build/multi_robot_coop', 'TURTLEBOT3_MODEL': 'waffle_pi', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kishu/roboticslab-technical-project/build/multi_robot_coop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[3.038998] (-) TimerEvent: {}
+[3.126940] (gazebo_models) StdoutLine: {'line': b'-- Build files have been written to: /home/kishu/roboticslab-technical-project/build/gazebo_models\n'}
+[3.139850] (-) TimerEvent: {}
+[3.140682] (gazebo_models) CommandEnded: {'returncode': 0}
+[3.148357] (gazebo_models) JobProgress: {'identifier': 'gazebo_models', 'progress': 'build'}
+[3.148492] (gazebo_models) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kishu/roboticslab-technical-project/build/gazebo_models', '--', '-j4', '-l4'], 'cwd': '/home/kishu/roboticslab-technical-project/build/gazebo_models', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kishu'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kishu'), ('OLDPWD', '/home/kishu'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kishu'), ('NAME', 'DESKTOP-07TM2Q3'), ('WSL_INTEROP', '/run/WSL/1842_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/kishu/roboticslab-technical-project/models::/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/kishu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu22.04LTS_2204.5.10021.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Mohamad/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mohamad/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Mohamad/AppData/Local/GitHubDesktop/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/kishu/roboticslab-technical-project/build/gazebo_models'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', '')]), 'shell': False}
+[3.185200] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.186225] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.241236] (-) TimerEvent: {}
+[3.332693] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[3.333007] (gazebo_models) StderrLine: {'line': b'tar: ../ambulance: Cannot stat: No such file or directory\n'}
+[3.333162] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[3.333308] (gazebo_models) StderrLine: {'line': b'tar: ../apollo15_landing_site_1000x1000: Cannot stat: No such file or directory\n'}
+[3.333492] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[3.333674] (gazebo_models) StderrLine: {'line': b'tar: ../apartment: Cannot stat: No such file or directory\n'}
+[3.333844] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[3.334031] (gazebo_models) StderrLine: {'line': b'tar: ../arm_part: Cannot stat: No such file or directory\n'}
+[3.335123] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[3.335384] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ambulance.dir/build.make:71: CMakeFiles/ambulance] Error 2\n'}
+[3.338379] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/ambulance.dir/all] Error 2\n'}
+[3.339140] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[3.339455] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[3.339616] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/apartment.dir/build.make:71: CMakeFiles/apartment] Error 2\n'}
+[3.340067] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:619: CMakeFiles/apartment.dir/all] Error 2\n'}
+[3.340257] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errorstar: Exiting with failure status due to previous errors\n'}
+[3.340410] (gazebo_models) StderrLine: {'line': b'\n'}
+[3.340558] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/apollo15_landing_site_1000x1000.dir/build.make:71: CMakeFiles/apollo15_landing_site_1000x1000] Error 2\n'}
+[3.340775] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/arm_part.dir/build.make:71: CMakeFiles/arm_part] Error 2\n'}
+[3.340928] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:645: CMakeFiles/apollo15_landing_site_1000x1000.dir/all] Error 2\n'}
+[3.341073] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:671: CMakeFiles/arm_part.dir/all] Error 2\n'}
+[3.341208] (-) TimerEvent: {}
+[3.341654] (gazebo_models) StderrLine: {'line': b'gmake: *** [Makefile:156: all] Error 2\n'}
+[3.344559] (gazebo_models) CommandEnded: {'returncode': 2}
+[3.345336] (gazebo_models) JobEnded: {'identifier': 'gazebo_models', 'rc': 2}
+[3.441417] (-) TimerEvent: {}
+[3.501449] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.503247] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.541586] (-) TimerEvent: {}
+[3.642229] (-) TimerEvent: {}
+[3.666994] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.734973] (roboticslab_project) StdoutLine: {'line': b'running egg_info\n'}
+[3.737028] (roboticslab_project) StdoutLine: {'line': b'creating ../../../build/roboticslab_project/roboticslab_project.egg-info\n'}
+[3.737831] (roboticslab_project) StdoutLine: {'line': b'writing ../../../build/roboticslab_project/roboticslab_project.egg-info/PKG-INFO\n'}
+[3.738393] (roboticslab_project) StdoutLine: {'line': b'writing dependency_links to ../../../build/roboticslab_project/roboticslab_project.egg-info/dependency_links.txt\n'}
+[3.739171] (roboticslab_project) StdoutLine: {'line': b'writing entry points to ../../../build/roboticslab_project/roboticslab_project.egg-info/entry_points.txt\n'}
+[3.739561] (roboticslab_project) StdoutLine: {'line': b'writing requirements to ../../../build/roboticslab_project/roboticslab_project.egg-info/requires.txt\n'}
+[3.739941] (roboticslab_project) StdoutLine: {'line': b'writing top-level names to ../../../build/roboticslab_project/roboticslab_project.egg-info/top_level.txt\n'}
+[3.740191] (roboticslab_project) StdoutLine: {'line': b"writing manifest file '../../../build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'\n"}
+[3.742449] (-) TimerEvent: {}
+[3.744594] (roboticslab_project) StdoutLine: {'line': b"reading manifest file '../../../build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'\n"}
+[3.746518] (roboticslab_project) StdoutLine: {'line': b"writing manifest file '../../../build/roboticslab_project/roboticslab_project.egg-info/SOURCES.txt'\n"}
+[3.746841] (roboticslab_project) StdoutLine: {'line': b'running build\n'}
+[3.747032] (roboticslab_project) StdoutLine: {'line': b'running build_py\n'}
+[3.747246] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/build/roboticslab_project/build\n'}
+[3.748099] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib\n'}
+[3.748751] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[3.750399] (roboticslab_project) StdoutLine: {'line': b'copying roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[3.750755] (roboticslab_project) StdoutLine: {'line': b'copying roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[3.754346] (roboticslab_project) StdoutLine: {'line': b'copying roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project\n'}
+[3.755724] (roboticslab_project) StdoutLine: {'line': b'running install\n'}
+[3.756587] (roboticslab_project) StdoutLine: {'line': b'running install_lib\n'}
+[3.759857] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project\n'}
+[3.760857] (roboticslab_project) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project/__init__.py -> /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project\n'}
+[3.761182] (roboticslab_project) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project/arm_controller.py -> /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project\n'}
+[3.761421] (roboticslab_project) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/roboticslab_project/build/lib/roboticslab_project/mobile_controller.py -> /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project\n'}
+[3.762502] (roboticslab_project) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project/__init__.py to __init__.cpython-310.pyc\n'}
+[3.764165] (roboticslab_project) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project/arm_controller.py to arm_controller.cpython-310.pyc\n'}
+[3.765189] (roboticslab_project) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project/mobile_controller.py to mobile_controller.cpython-310.pyc\n'}
+[3.766122] (roboticslab_project) StdoutLine: {'line': b'running install_data\n'}
+[3.766449] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/ament_index\n'}
+[3.766680] (multi_robot_coop) StdoutLine: {'line': b'running egg_info\n'}
+[3.767035] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/ament_index/resource_index\n'}
+[3.767555] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/ament_index/resource_index/packages\n'}
+[3.767816] (multi_robot_coop) StdoutLine: {'line': b'creating ../../../build/multi_robot_coop/multi_robot_coop.egg-info\n'}
+[3.768851] (roboticslab_project) StdoutLine: {'line': b'copying resource/roboticslab_project -> /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/ament_index/resource_index/packages\n'}
+[3.769147] (multi_robot_coop) StdoutLine: {'line': b'writing ../../../build/multi_robot_coop/multi_robot_coop.egg-info/PKG-INFO\n'}
+[3.770181] (roboticslab_project) StdoutLine: {'line': b'copying package.xml -> /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/roboticslab_project\n'}
+[3.770432] (multi_robot_coop) StdoutLine: {'line': b'writing dependency_links to ../../../build/multi_robot_coop/multi_robot_coop.egg-info/dependency_links.txt\n'}
+[3.770709] (roboticslab_project) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/roboticslab_project/launch\n'}
+[3.770851] (multi_robot_coop) StdoutLine: {'line': b'writing entry points to ../../../build/multi_robot_coop/multi_robot_coop.egg-info/entry_points.txt\n'}
+[3.771100] (multi_robot_coop) StdoutLine: {'line': b'writing requirements to ../../../build/multi_robot_coop/multi_robot_coop.egg-info/requires.txt\n'}
+[3.771297] (multi_robot_coop) StdoutLine: {'line': b'writing top-level names to ../../../build/multi_robot_coop/multi_robot_coop.egg-info/top_level.txt\n'}
+[3.771525] (roboticslab_project) StdoutLine: {'line': b'copying launch/simulation.launch.py -> /home/kishu/roboticslab-technical-project/install/roboticslab_project/share/roboticslab_project/launch\n'}
+[3.771798] (multi_robot_coop) StdoutLine: {'line': b"writing manifest file '../../../build/multi_robot_coop/multi_robot_coop.egg-info/SOURCES.txt'\n"}
+[3.772224] (roboticslab_project) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.776403] (roboticslab_project) StdoutLine: {'line': b'Copying ../../../build/roboticslab_project/roboticslab_project.egg-info to /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/python3.10/site-packages/roboticslab_project-0.0.0-py3.10.egg-info\n'}
+[3.776931] (multi_robot_coop) StdoutLine: {'line': b"reading manifest file '../../../build/multi_robot_coop/multi_robot_coop.egg-info/SOURCES.txt'\n"}
+[3.778412] (multi_robot_coop) StdoutLine: {'line': b"writing manifest file '../../../build/multi_robot_coop/multi_robot_coop.egg-info/SOURCES.txt'\n"}
+[3.778783] (multi_robot_coop) StdoutLine: {'line': b'running build\n'}
+[3.778966] (multi_robot_coop) StdoutLine: {'line': b'running build_py\n'}
+[3.779219] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build\n'}
+[3.779776] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib\n'}
+[3.780342] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.780562] (roboticslab_project) StdoutLine: {'line': b'running install_scripts\n'}
+[3.781053] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/__init__.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.781350] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/arm_coordinator.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.782568] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/tb3_controller.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.783882] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/tb3_coordinator.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.784749] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/arm_controller.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.786985] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/scenario_coordinator.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.787373] (multi_robot_coop) StdoutLine: {'line': b'copying multi_robot_coop/arm_real_controller.py -> /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop\n'}
+[3.792154] (multi_robot_coop) StdoutLine: {'line': b'running install\n'}
+[3.792551] (multi_robot_coop) StdoutLine: {'line': b'running install_lib\n'}
+[3.793836] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.794517] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/__init__.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.794858] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/arm_coordinator.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.795120] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/tb3_controller.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.795352] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/tb3_coordinator.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.795592] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/arm_controller.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.795999] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/scenario_coordinator.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.796406] (multi_robot_coop) StdoutLine: {'line': b'copying /home/kishu/roboticslab-technical-project/build/multi_robot_coop/build/lib/multi_robot_coop/arm_real_controller.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop\n'}
+[3.797359] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/__init__.py to __init__.cpython-310.pyc\n'}
+[3.798282] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/arm_coordinator.py to arm_coordinator.cpython-310.pyc\n'}
+[3.799439] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/tb3_controller.py to tb3_controller.cpython-310.pyc\n'}
+[3.800577] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/tb3_coordinator.py to tb3_coordinator.cpython-310.pyc\n'}
+[3.802122] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/arm_controller.py to arm_controller.cpython-310.pyc\n'}
+[3.803504] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/scenario_coordinator.py to scenario_coordinator.cpython-310.pyc\n'}
+[3.811860] (multi_robot_coop) StdoutLine: {'line': b'byte-compiling /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop/arm_real_controller.py to arm_real_controller.cpython-310.pyc\n'}
+[3.813727] (multi_robot_coop) StdoutLine: {'line': b'running install_data\n'}
+[3.814119] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/ament_index\n'}
+[3.814734] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/ament_index/resource_index\n'}
+[3.815371] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/ament_index/resource_index/packages\n'}
+[3.816137] (multi_robot_coop) StdoutLine: {'line': b'copying resource/multi_robot_coop -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/ament_index/resource_index/packages\n'}
+[3.816460] (multi_robot_coop) StdoutLine: {'line': b'copying package.xml -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/multi_robot_coop\n'}
+[3.816779] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/multi_robot_coop/launch\n'}
+[3.817646] (multi_robot_coop) StdoutLine: {'line': b'copying launch/scenario.launch.py -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/multi_robot_coop/launch\n'}
+[3.818727] (multi_robot_coop) StdoutLine: {'line': b'creating /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/multi_robot_coop/config\n'}
+[3.819830] (multi_robot_coop) StdoutLine: {'line': b'copying config/iiwa_controllers.yaml -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/multi_robot_coop/config\n'}
+[3.820523] (multi_robot_coop) StdoutLine: {'line': b'copying config/iiwa_rsp.yaml -> /home/kishu/roboticslab-technical-project/install/multi_robot_coop/share/multi_robot_coop/config\n'}
+[3.820874] (multi_robot_coop) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.824166] (multi_robot_coop) StdoutLine: {'line': b'Copying ../../../build/multi_robot_coop/multi_robot_coop.egg-info to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/python3.10/site-packages/multi_robot_coop-0.0.0-py3.10.egg-info\n'}
+[3.826719] (multi_robot_coop) StdoutLine: {'line': b'running install_scripts\n'}
+[3.830063] (roboticslab_project) StdoutLine: {'line': b'Installing arm_controller script to /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/roboticslab_project\n'}
+[3.831112] (roboticslab_project) StdoutLine: {'line': b'Installing mobile_controller script to /home/kishu/roboticslab-technical-project/install/roboticslab_project/lib/roboticslab_project\n'}
+[3.831853] (roboticslab_project) StdoutLine: {'line': b"writing list of installed files to '/home/kishu/roboticslab-technical-project/build/roboticslab_project/install.log'\n"}
+[3.842684] (-) TimerEvent: {}
+[3.874307] (multi_robot_coop) StdoutLine: {'line': b'Installing arm_controller script to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/multi_robot_coop\n'}
+[3.875119] (multi_robot_coop) StdoutLine: {'line': b'Installing arm_coordinator script to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/multi_robot_coop\n'}
+[3.875753] (multi_robot_coop) StdoutLine: {'line': b'Installing arm_real_controller script to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/multi_robot_coop\n'}
+[3.876328] (multi_robot_coop) StdoutLine: {'line': b'Installing scenario_coordinator script to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/multi_robot_coop\n'}
+[3.876577] (multi_robot_coop) StdoutLine: {'line': b'Installing tb3_controller script to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/multi_robot_coop\n'}
+[3.876853] (multi_robot_coop) StdoutLine: {'line': b'Installing tb3_coordinator script to /home/kishu/roboticslab-technical-project/install/multi_robot_coop/lib/multi_robot_coop\n'}
+[3.877369] (multi_robot_coop) StdoutLine: {'line': b"writing list of installed files to '/home/kishu/roboticslab-technical-project/build/multi_robot_coop/install.log'\n"}
+[3.901742] (roboticslab_project) JobEnded: {'identifier': 'roboticslab_project', 'rc': 'SIGINT'}
+[3.938906] (multi_robot_coop) JobEnded: {'identifier': 'multi_robot_coop', 'rc': 'SIGINT'}
+[3.942946] (-) TimerEvent: {}
+[4.043627] (-) TimerEvent: {}
+[4.144330] (-) TimerEvent: {}
+[4.244907] (-) TimerEvent: {}
+[4.262831] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Generating done\n'}
+[4.330542] (BULLET_PHYSICS) StdoutLine: {'line': b'-- Build files have been written to: /home/kishu/roboticslab-technical-project/build/BULLET_PHYSICS\n'}
+[4.345136] (-) TimerEvent: {}
+[4.348302] (BULLET_PHYSICS) JobEnded: {'identifier': 'BULLET_PHYSICS', 'rc': 'SIGINT'}
+[4.359282] (-) EventReactorShutdown: {}
