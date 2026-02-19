@@ -101,7 +101,11 @@ Service type:
 ```gazebo_ros_link_attacher/Attach```
 
 -----------------------------------------------------------------------
-
+**controllers**
+```ros2 control list_controllers```
+```joint_state_broadcaster[active]
+iiwa_arm_controller[active]```
+------------------------------------------------------------------------
 **CONTROL LOGIC**
 
 TurtleBot3:
