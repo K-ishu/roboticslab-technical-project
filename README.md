@@ -4,7 +4,7 @@
 
 -----------------------------------------------------------------------
 
-#PROJECT OVERVIEW
+**PROJECT OVERVIEW**
 
 This repository contains a case-study implementation of a cooperative
 multi-robot autonomous system simulated in Gazebo Classic using ROS 2 Humble.
@@ -19,7 +19,7 @@ navigation, object transport, grasping, and placement.
 
 -----------------------------------------------------------------------
 
-#CASE STUDY DESCRIPTION
+**CASE STUDY DESCRIPTION**
 
 1) TurtleBot3 navigates autonomously using LiDAR.
 2) TurtleBot3 aligns with a stone object.
@@ -33,7 +33,7 @@ navigation, object transport, grasping, and placement.
 
 -----------------------------------------------------------------------
 
-#SIMULATION ENVIRONMENT
+**SIMULATION ENVIRONMENT**
 
 World file:
 worlds/lab_world.sdf
@@ -47,7 +47,7 @@ The environment includes:
 - TurtleBot3 Waffle Pi
 - KUKA LBR iiwa (ros2_control enabled)
 
-#Important poses:
+**Important poses:**
 
 Arm Base:
 (-1.3, -0.3, 0)
@@ -63,7 +63,7 @@ Obstacle Cylinder:
 
 -----------------------------------------------------------------------
 
-#ROBOTS
+**ROBOTS**
 
 TurtleBot3:
 - /cmd_vel
@@ -72,7 +72,7 @@ TurtleBot3:
 - Reactive obstacle avoidance
 - Stuck detection and recovery
 
-#KUKA LBR iiwa:
+**KUKA LBR iiwa:**
 - ros2_control enabled
 - joint_trajectory_controller
 - /iiwa_arm_controller/joint_trajectory
@@ -81,7 +81,7 @@ TurtleBot3:
 
 -----------------------------------------------------------------------
 
-#SYSTEM ARCHITECTURE
+**SYSTEM ARCHITECTURE**
 
 Main Node:
 scenario_coordinator
@@ -102,7 +102,7 @@ gazebo_ros_link_attacher/Attach
 
 -----------------------------------------------------------------------
 
-#CONTROL LOGIC
+**CONTROL LOGIC**
 
 TurtleBot3:
 - Sector-based LiDAR avoidance
@@ -126,7 +126,7 @@ Arm Pick & Place:
 
 -----------------------------------------------------------------------
 
-#STATE MACHINE
+**STATE MACHINE**
 
 1) TB3_GOTO_STONE_AREA
 2) TB3_TOUCH_AND_ATTACH
@@ -143,7 +143,7 @@ ros2 topic echo /scenario_status
 
 -----------------------------------------------------------------------
 
-#LAUNCH INSTRUCTIONS
+**LAUNCH INSTRUCTIONS**
 
 cd ~/roboticslab-technical-project/ros2_ws
 colcon build
@@ -152,7 +152,7 @@ ros2 launch multi_robot_coop scenario.launch.py
 
 -----------------------------------------------------------------------
 
-#DEPENDENCIES
+**DEPENDENCIES**
 
 Ubuntu 22.04
 ROS 2 Humble
@@ -165,7 +165,7 @@ joint_trajectory_controller
 
 -----------------------------------------------------------------------
 
-#RESULTS
+**RESULTS**
 
 The system successfully demonstrates:
 
@@ -177,13 +177,13 @@ The system successfully demonstrates:
 
 -----------------------------------------------------------------------
 
-#VIDEO DEMO
+**VIDEO DEMO**
 
 <Insert MS Teams / YouTube link here>
 
 -----------------------------------------------------------------------
 
-#AUTHOR
+**AUTHOR**
 
 Name: Mohammad reza khodashenas
 Course: Robotics Lab – Technical Project
