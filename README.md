@@ -1,11 +1,10 @@
 # Multi-Robot Cooperative System
 # Robotics Lab – Technical Project
 # ROS 2 Humble + Gazebo Classic
-<img width="1366" height="768" alt="overview" src="https://github.com/user-attachments/assets/5e51b613-a97f-46b7-8e37-70ee7cf35b64" />
 
 -----------------------------------------------------------------------
-
 **PROJECT OVERVIEW**
+<img width="1351" height="713" alt="overview" src="https://github.com/user-attachments/assets/9b1f4f93-5139-4d63-a4dc-7001664e32b5" />
 
 This repository contains a case-study implementation of a cooperative
 multi-robot autonomous system simulated in Gazebo Classic using ROS 2 Humble.
