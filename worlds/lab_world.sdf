@@ -1,11 +1,7 @@
-<?xml version="1.0" ?>
-<sdf version="1.9">
-  <world name="lab_world">
- <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
-</plugin>
+<sdf version='1.7'>
+  <world name='lab_world'>
 
-    <!-- نور (بدون include) -->
-    <light name="sun" type="directional">
+    <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <diffuse>1 1 1 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
@@ -16,14 +12,14 @@
         <quadratic>0.001</quadratic>
       </attenuation>
       <direction>-0.5 0.5 -1</direction>
-      <cast_shadows>true</cast_shadows>
+      <cast_shadows>1</cast_shadows>
     </light>
 
-    <!-- زمین (بدون include) -->
-    <model name="ground">
-      <static>true</static>
-      <link name="ground_link">
-        <collision name="ground_collision">
+    <!-- Ground -->
+    <model name='ground'>
+      <static>1</static>
+      <link name='ground_link'>
+        <collision name='ground_collision'>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -31,8 +27,7 @@
             </plane>
           </geometry>
         </collision>
-
-        <visual name="ground_visual">
+        <visual name='ground_visual'>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -40,216 +35,228 @@
             </plane>
           </geometry>
           <material>
-            <ambient>0.7 0.7 0.7 1</ambient>
-            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <ambient>0.85 0.85 0.85 1</ambient>
+            <diffuse>0.85 0.85 0.85 1</diffuse>
           </material>
         </visual>
       </link>
     </model>
 
-    <!-- ================= Brick Wall LEFT ================= -->
-<model name="brick_wall_left">
-  <static>true</static>
-  <pose>2.1 -2 0.75 0 0 0</pose>
-  <link name="wall_link">
+    <!-- Brick wall left -->
+    <model name='brick_wall_left'>
+      <static>1</static>
+      <pose>-2.46405 -1.10882 0.75 0 -0 0</pose>
+      <link name='wall_link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.2 4 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.2 4 1.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.65 0.32 0.22 1</ambient>
+            <diffuse>0.75 0.38 0.26 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
 
-    <collision name="collision">
-      <geometry>
-        <box>
-          <size>0.2 4.0 1.5</size>
-        </box>
-      </geometry>
-    </collision>
+    <!-- Brick wall right -->
+    <model name='brick_wall_right'>
+      <static>1</static>
+      <pose>-0.347347 0.968595 0.75 0 -0 1.5708</pose>
+      <link name='wall_link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.2 4 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.2 4 1.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.65 0.32 0.22 1</ambient>
+            <diffuse>0.75 0.38 0.26 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
 
-    <visual name="visual">
-      <geometry>
-        <box>
-          <size>0.2 4.0 1.5</size>
-        </box>
-      </geometry>
-      <material>
-        <ambient>0.65 0.32 0.22 1</ambient>
-        <diffuse>0.75 0.38 0.26 1</diffuse>
-      </material>
-    </visual>
+    <!-- Obstacle box -->
+    <model name='obstacle_box'>
+      <static>1</static>
+      <pose>1.51611 -3.24702 0.25 0 -0 0</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.6 0.2 0.2 1</ambient>
+            <diffuse>0.6 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
 
-  </link>
-</model>
-<!-- ================= Brick Wall RIGHT ================= -->
-<model name="brick_wall_right">
-  <static>true</static>
-<pose>0 0 0.75 0 0 1.5708</pose>
+    <!-- Obstacle cylinder -->
+    <model name='obstacle_cylinder'>
+      <static>1</static>
+      <pose>2.87436 -2.43085 0.35 0 -0 0</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>0.7</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>0.7</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.6 1</ambient>
+            <diffuse>0.2 0.2 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
 
-  <link name="wall_link">
+    <!-- Stone (dynamic) -->
+    <model name='stone'>
+      <static>0</static>
+      <pose>3.45662 -0.223026 0.125 0 -0 0</pose>
+      <link name='stone_link'>
+        <inertial>
+          <mass>0.6</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <iyy>0.001</iyy>
+            <izz>0.001</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+  <geometry>
+    <cylinder>
+      <radius>0.08</radius>
+      <length>0.13</length>
+    </cylinder>
+  </geometry>
+  <surface>
+    <friction>
+      <ode>
+        <mu>2.0</mu>
+        <mu2>2.0</mu2>
+      </ode>
+    </friction>
+  </surface>
+</collision>
 
-    <collision name="collision">
-      <geometry>
-        <box>
-          <size>0.2 4.0 1.5</size>
-        </box>
-      </geometry>
-    </collision>
+<visual name='visual'>
+  <geometry>
+    <cylinder>
+      <radius>0.08</radius>
+      <length>0.18</length>
+    </cylinder>
+  </geometry>
+  <material>
+    <ambient>0.4 0.4 0.4 1</ambient>
+    <diffuse>0.4 0.4 0.4 1</diffuse>
+  </material>
+</visual>
+   
+      </link>
+    </model>
 
-    <visual name="visual">
-      <geometry>
-        <box>
-          <size>0.2 4.0 1.5</size>
-        </box>
-      </geometry>
-      <material>
-        <ambient>0.65 0.32 0.22 1</ambient>
-        <diffuse>0.75 0.38 0.26 1</diffuse>
-      </material>
-    </visual>
+    <!-- Container -->
+    <model name='container'>
+      <static>1</static>
+      <pose>-1.54015 -1.08473 0 0 -0 0</pose>
+      <link name='container_link'>
+        <collision name='base_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='base_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.1 0.8 1</ambient>
+          </material>
+        </visual>
 
-  </link>
-</model>
-<!-- ================= Target Object ================= -->
-<model name="target_box">
-  <static>false</static>
+        <collision name='wall_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.17</radius>
+              <length>0.25</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='wall_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.17</radius>
+              <length>0.25</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.1 0.6 0.6</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+      <!-- ✅ INCLUDE: TurtleBot3 -->
+    <include>
+      <uri>model://turtlebot3_waffle_pi</uri>
+      <name>tb3</name>
+      <pose>1.05255 -4.70317 0.007875 0 0.006291 0.000337</pose>
+    </include>
+    <!-- ✅ INCLUDE: KUKA iiwa (ros2_control) -->
+    <include>
+      <uri>model://kuka_iiwa_ros2_control</uri>
+      <name>lbr_iiwa</name>
+      <pose>-1.3 -0.3 0 0 0 0</pose>
+    </include>
+    <plugin name="gazebo_ros_link_attacher" filename="libgazebo_ros_link_attacher_plugin.so"/>
 
-  <!-- موقعیت شیء داخل محدوده دیوار -->
-  <pose>0.2 -0.7 0.1 0 0 0</pose>
-
-  <link name="box_link">
-
-    <inertial>
-      <mass>1.0</mass>
-      <inertia>
-        <ixx>0.01</ixx>
-        <iyy>0.01</iyy>
-        <izz>0.01</izz>
-      </inertia>
-    </inertial>
-
-    <collision name="collision">
-      <geometry>
-        <box>
-          <size>0.2 0.2 0.2</size>
-        </box>
-      </geometry>
-    </collision>
-
-    <visual name="visual">
-      <geometry>
-        <box>
-          <size>0.2 0.2 0.2</size>
-        </box>
-      </geometry>
-      <material>
-        <ambient>0.2 0.2 0.8 1</ambient>
-        <diffuse>0.2 0.2 0.8 1</diffuse>
-      </material>
-    </visual>
-
-  </link>
-</model>
-<!-- ================= Obstacle 1 : Box ================= -->
-<model name="obstacle_box">
-  <static>true</static>
-  <pose>1 -0.9 0.25 0 0 0</pose>
-
-  <link name="link">
-    <collision name="collision">
-      <geometry>
-        <box>
-          <size>0.5 0.5 0.5</size>
-        </box>
-      </geometry>
-    </collision>
-
-    <visual name="visual">
-      <geometry>
-        <box>
-          <size>0.5 0.5 0.5</size>
-        </box>
-      </geometry>
-      <material>
-        <ambient>0.6 0.2 0.2 1</ambient>
-        <diffuse>0.6 0.2 0.2 1</diffuse>
-      </material>
-    </visual>
-  </link>
-</model>
-<!-- ================= Obstacle 2 : Cylinder ================= -->
-<model name="obstacle_cylinder">
-  <static>true</static>
-  <pose>0.6 -1.0 0.35 0 0 0</pose>
-
-  <link name="link">
-    <collision name="collision">
-      <geometry>
-        <cylinder>
-          <radius>0.2</radius>
-          <length>0.7</length>
-        </cylinder>
-      </geometry>
-    </collision>
-
-    <visual name="visual">
-      <geometry>
-        <cylinder>
-          <radius>0.2</radius>
-          <length>0.7</length>
-        </cylinder>
-      </geometry>
-      <material>
-        <ambient>0.2 0.2 0.6 1</ambient>
-        <diffuse>0.2 0.2 0.6 1</diffuse>
-      </material>
-    </visual>
-  </link>
-</model>
-
-<!-- ================= TAG / MARKER (visual tag board) ================= -->
-<model name="tag_board">
-  <static>true</static>
-
-  <!-- جای تگ داخل محدوده دیوارها (قابل تغییر بعداً) -->
-  <pose>1.9 -0.6 0.6 0 0 0</pose>
-
-  <link name="tag_link">
-
-    <!-- فقط visual؛ collision هم می‌ذاریم که ربات ازش رد نشه -->
-    <collision name="collision">
-      <geometry>
-        <!-- مثل یک تابلو نازک -->
-        <box>
-          <size>0.02 0.6 0.6</size>
-        </box>
-      </geometry>
-    </collision>
-
-    <visual name="visual">
-      <geometry>
-        <box>
-          <size>0.02 0.6 0.6</size>
-        </box>
-      </geometry>
-
-      <!-- رنگ تگ -->
-      <material>
-        <ambient>0.9 0.9 0.1 1</ambient>
-        <diffuse>0.9 0.9 0.1 1</diffuse>
-      </material>
-    </visual>
-
-  </link>
-</model>
-
-
-<include>
-  <uri>model://turtlebot3_waffle_pi</uri>
-  <name>tb3_waffle</name>
-  <pose>0 -1 0.05 0 0 0</pose>
-</include>
-
-<include>
-  <uri>file:///home/kishu/roboticslab-technical-project/models/industrial_arm</uri>
-  <name>industrial_arm</name>
-  <!-- بذارش کنار ربات که تداخل نداشته باشه -->
-<pose>-1.3 -0.3 0.05 0 0 0</pose>
- 
-</include>
   </world>
-</sdf>                    
+</sdf>
+
