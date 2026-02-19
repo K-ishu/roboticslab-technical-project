@@ -103,8 +103,8 @@ Service type:
 -----------------------------------------------------------------------
 **controllers**
 ```ros2 control list_controllers```
-```joint_state_broadcaster[active]
-iiwa_arm_controller[active]```
+```joint_state_broadcaster[active]```
+```iiwa_arm_controller[active]```
 ------------------------------------------------------------------------
 **CONTROL LOGIC**
 
