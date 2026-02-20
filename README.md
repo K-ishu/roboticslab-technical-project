@@ -184,7 +184,6 @@ The system successfully demonstrates:
 **VIDEO DEMO**
 
 
-
 https://github.com/user-attachments/assets/0ccdeb76-6b2c-4dc8-870e-92841887adc4
 
 because of the system problem the gazebo crashed and you can see just first part of cooperation
