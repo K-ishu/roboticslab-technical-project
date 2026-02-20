@@ -97,6 +97,7 @@ Services:
 
 Service type:
 ```gazebo_ros_link_attacher/Attach```
+![5816888498236100159](https://github.com/user-attachments/assets/10fbd90a-8398-4f18-97c0-2027203aef3b)
 
 -----------------------------------------------------------------------
 **controllers**
