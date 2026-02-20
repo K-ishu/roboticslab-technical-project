@@ -1,7 +1,5 @@
 
 # Robotics Lab – Technical Project
-# ROS 2 Humble + Gazebo Classic
-
 -----------------------------------------------------------------------
 **PROJECT OVERVIEW**
 <img width="1351" height="713" alt="overview" src="https://github.com/user-attachments/assets/9b1f4f93-5139-4d63-a4dc-7001664e32b5" />
