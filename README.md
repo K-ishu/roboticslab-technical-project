@@ -474,7 +474,7 @@ colcon build
 
 source install/setup.bash
 
-# ------------------------------------------------------------------------------
+-----------------------------------------------------------------
 
 ## Run Project
 
@@ -482,7 +482,7 @@ Launch the complete scenario:
 
 ros2 launch multi_robot_coop scenario.launch.py
 
-# ------------------------------------------------------------------------------
+-----------------------------------------------------------------
 
 ## Manual Debugging Commands
 
@@ -514,7 +514,7 @@ ros2 service list
 
 ros2 service list | grep attach
 
-# ------------------------------------------------------------------------------
+--------------------------------------------------------------------
 
 ## Optional Manual Gazebo Run
 
@@ -522,7 +522,7 @@ Run only the Gazebo world:
 
 gazebo ~/roboticslab-technical-project/worlds/lab_world.sdf
 
-# ------------------------------------------------------------------------------
+----------------------------------------------------------------
 
 ## Technical Challenges
 
@@ -538,8 +538,7 @@ gazebo ~/roboticslab-technical-project/worlds/lab_world.sdf
 - Added sector-based obstacle filtering
 - Implemented reverse-and-rotate recovery logic
 - Added stuck detection and timeout handling
-
-# ------------------------------------------------------------------------------
+---------------------------------------------------------------------
 
 ## Grasping Challenges
 
@@ -554,8 +553,7 @@ gazebo ~/roboticslab-technical-project/worlds/lab_world.sdf
 - Tuned joint trajectory values
 - Added stable lift and placement stages
 - Corrected stone pose before final placement
-
-# ------------------------------------------------------------------------------
+ ------------------------------------------------------------------
 
 ## Results
 
@@ -570,8 +568,7 @@ The system successfully demonstrates:
 - Physics-based grasping
 - Container placement
 - Full mission orchestration using a ROS2 finite state machine
-
-# ------------------------------------------------------------------------------
+ -------------------------------------------------------------------
 
 ## Video 
 
@@ -583,7 +580,7 @@ https://github.com/user-attachments/assets/528e7eb6-675c-4c41-bf87-bca8de443ce4
 
 /user-attachments/assets/0ccdeb...
 
-# ------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 
 
