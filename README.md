@@ -64,7 +64,7 @@ worlds/lab_world.sdf
 # =========================================================
 # ROS2 + Gazebo Multi-Robot Pick & Place Scenario
 # Complete README Shell Format
-# =========================================================
+
 
 
 # =========================
@@ -154,10 +154,9 @@ using a finite state machine (FSM).
 gazebo_ros_link_attacher/Attach
 
 
-
-# =========================
+-------------------------------------------------------------------------
 # GAZEBO LINK ATTACHER
-# =========================
+
 
 ## Purpose
 Used to simulate robotic grasping and object transport
