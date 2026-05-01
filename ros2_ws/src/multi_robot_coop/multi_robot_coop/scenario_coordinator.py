@@ -2,7 +2,6 @@
 import math
 import time
 import subprocess
-from dataclasses import dataclass
 
 import rclpy
 from rclpy.node import Node
@@ -13,15 +12,13 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
+from gazebo_ros_link_attacher.srv import Attach
+
 
 def yaw_from_quat(x, y, z, w):
     siny_cosp = 2.0 * (w * z + x * y)
     cosy_cosp = 1.0 - 2.0 * (y * y + z * z)
     return math.atan2(siny_cosp, cosy_cosp)
-
-
-def clamp(v, lo, hi):
-    return max(lo, min(hi, v))
 
 
 def wrap_to_pi(a):
@@ -32,280 +29,257 @@ def wrap_to_pi(a):
     return a
 
 
-@dataclass
-class Pose2D:
-    x: float
-    y: float
-    yaw: float
+def clamp(v, lo, hi):
+    return max(lo, min(hi, v))
 
 
 class ScenarioCoordinator(Node):
     def __init__(self):
         super().__init__("scenario_coordinator")
 
-        # ===================== WORLD / COORDS =====================
-        self.world_name = "lab_world"
-        self.stone_name = "stone"
+        self.odom_topic = self.declare_parameter("odom_topic", "/odom").value
+        self.scan_topic = self.declare_parameter("scan_topic", "/tb3/scan").value
+        self.cmd_vel_topic = self.declare_parameter("cmd_vel_topic", "/cmd_vel").value
 
-        self.stone_xy = (3.45662, -0.223026)
-        self.arm_zone_center = (-1.05, -0.55)
-        self.container_xy = (-1.54015, -1.08473)
+        self.attach_service = self.declare_parameter("attach_service", "/attach").value
+        self.detach_service = self.declare_parameter("detach_service", "/detach").value
 
-        # ===================== WAYPOINTS (KEEP THIS) =====================
-        self.waypoints = [
-            (1.20, -3.90),
-            (2.60, -3.20),
-            (3.90, -1.80),
-        ]
-        self.wp_idx = 0
+        self.tb3_model = self.declare_parameter("tb3_model", "tb3").value
+        self.tb3_link = self.declare_parameter("tb3_link", "base_link").value
 
-        # ===================== TOPICS =====================
-        self.cmd_vel_topic = "/cmd_vel"
-        self.scan_topic = "/tb3/scan"
-        self.odom_topic = "/odom"
-        self.traj_topic = "/iiwa_arm_controller/joint_trajectory"
-        self.status_topic = "/scenario_status"
+        self.stone_model = self.declare_parameter("stone_model", "stone").value
+        self.stone_link = self.declare_parameter("stone_link", "stone_link").value
+
+        self.arm_model = self.declare_parameter("arm_model", "lbr_iiwa").value
+        self.arm_ee_link = self.declare_parameter("arm_ee_link", "lbr_iiwa_tool").value
+        self.arm_stone_link = self.declare_parameter("arm_stone_link", "stone_grasp_link").value
+
+        stone_xy = self.declare_parameter("stone_xy", [3.45662, -0.223026]).value
+        arm_xy = self.declare_parameter("arm_xy", [-1.3, -0.3]).value
+        start_xy = self.declare_parameter("start_xy", [1.05255, -4.70317]).value
+        push_xy = self.declare_parameter("push_xy", [-0.75, -0.30]).value
+
+        self.stone_xy = (float(stone_xy[0]), float(stone_xy[1]))
+        self.arm_xy = (float(arm_xy[0]), float(arm_xy[1]))
+        self.start_xy = (float(start_xy[0]), float(start_xy[1]))
+        self.push_xy = (float(push_xy[0]), float(push_xy[1]))
+
+        self.place_xy = (-1.54015, -1.08473)
+
+        self.v_nav = float(self.declare_parameter("v_nav", 0.22).value)
+        self.v_touch = float(self.declare_parameter("v_touch", 0.05).value)
+        self.v_push = float(self.declare_parameter("v_push", 0.10).value)
+
+        self.w_fast = float(self.declare_parameter("w_fast", 0.9).value)
+        self.w_align = float(self.declare_parameter("w_align", 0.45).value)
+
+        self.goto_stone_area_dist = float(self.declare_parameter("goto_stone_area_dist", 0.95).value)
+        self.push_goal_dist = float(self.declare_parameter("push_goal_dist", 0.18).value)
+
+        self.attach_dist = float(self.declare_parameter("attach_dist", 0.18).value)
+        self.attach_angle_deg = float(self.declare_parameter("attach_angle_deg", 8.0).value)
+
+        self.attached_ignore_front_deg = float(self.declare_parameter("attached_ignore_front_deg", 35.0).value)
+        self.attached_ignore_front_dist = float(self.declare_parameter("attached_ignore_front_dist", 0.32).value)
+
+        self.search_timeout = float(self.declare_parameter("search_timeout", 20.0).value)
+        self.push_timeout = float(self.declare_parameter("push_timeout", 55.0).value)
+        self.service_timeout = float(self.declare_parameter("service_timeout", 5.0).value)
 
         self.pub_cmd = self.create_publisher(Twist, self.cmd_vel_topic, 10)
-        self.pub_traj = self.create_publisher(JointTrajectory, self.traj_topic, 10)
-        self.pub_status = self.create_publisher(String, self.status_topic, 10)
+        self.pub_status = self.create_publisher(String, "/scenario_status", 10)
+        self.pub_traj = self.create_publisher(
+            JointTrajectory,
+            "/iiwa_arm_controller/joint_trajectory",
+            10,
+        )
 
-        self.sub_odom = self.create_subscription(Odometry, self.odom_topic, self.cb_odom, 10)
-        self.sub_scan = self.create_subscription(LaserScan, self.scan_topic, self.cb_scan, 10)
+        self.create_subscription(Odometry, self.odom_topic, self.cb_odom, 10)
+        self.create_subscription(LaserScan, self.scan_topic, self.cb_scan, 10)
 
-        # ===================== STATE =====================
-        self.tb3_pose: Pose2D | None = None
-        self.scan: LaserScan | None = None
+        self.cli_attach = self.create_client(Attach, self.attach_service)
+        self.cli_detach = self.create_client(Attach, self.detach_service)
+
+        self.x = None
+        self.y = None
+        self.yaw = None
+        self.scan = None
 
         self.state = "INIT"
         self.state_t0 = time.time()
 
         self.attached = False
+        self.attach_future = None
+        self.detach_future = None
+        self.req_sent_t = 0.0
 
-        # ===================== TUNING =====================
-        self.behind_dist = 0.95            # پشت سنگ (دورتر)
-        self.pre_attach_dist = 0.55        # پشت سنگ (نزدیک‌تر) برای اینکه دقیقاً از پشت بیاد
-        self.attach_offset = 0.22          # سنگ جلوی ربات وقتی attach است
-        self.detach_dist_to_arm = 0.75
-
-        self.v_go = 0.20
-        self.v_approach = 0.12            # نزدیک شدن مستقیم به سنگ
-        self.v_push = 0.18
-        self.w_max = 1.1
-
-        self.stop_d = 0.30
-        self.slow_d = 0.52
-
-        # stuck detector (فقط حرکت جلو)
-        self._last_stuck_check_t = time.time()
-        self._last_stuck_pose = None
-        self._last_cmd = Twist()
+        self.arm_started = False
+        self.arm_attach_sent = False
+        self.arm_detach_sent = False
 
         self.timer = self.create_timer(0.05, self.loop)
-        self.get_logger().info("ScenarioCoordinator started.")
-        self.publish_status("INIT")
+        self.get_logger().info("Scenario Coordinator Started")
 
-    # ---------------- callbacks ----------------
     def cb_odom(self, msg: Odometry):
         p = msg.pose.pose.position
         q = msg.pose.pose.orientation
-        yaw = yaw_from_quat(q.x, q.y, q.z, q.w)
-        self.tb3_pose = Pose2D(p.x, p.y, yaw)
+        self.x = p.x
+        self.y = p.y
+        self.yaw = yaw_from_quat(q.x, q.y, q.z, q.w)
 
     def cb_scan(self, msg: LaserScan):
         self.scan = msg
 
-    # ---------------- basic helpers ----------------
-    def publish_status(self, s: str):
+    def set_state(self, s):
+        self.state = s
+        self.state_t0 = time.time()
         m = String()
         m.data = s
         self.pub_status.publish(m)
-        self.get_logger().info(f"STATUS: {s}")
-
-    def set_state(self, s: str):
-        self.state = s
-        self.state_t0 = time.time()
-        self.publish_status(s)
+        self.get_logger().info(f"STATE {s}")
 
     def elapsed(self):
         return time.time() - self.state_t0
 
-    def stop_tb3(self):
+    def stop(self):
+        self.pub_cmd.publish(Twist())
+
+    def stop_hard(self, n=8, dt=0.02):
         t = Twist()
-        self.pub_cmd.publish(t)
-        self._last_cmd = t
+        for _ in range(n):
+            self.pub_cmd.publish(t)
+            time.sleep(dt)
 
-    def drive_tb3(self, lin, ang):
+    def drive(self, v, w):
         t = Twist()
-        t.linear.x = float(lin)
-        t.angular.z = float(ang)
+        t.linear.x = float(v)
+        t.angular.z = float(w)
         self.pub_cmd.publish(t)
-        self._last_cmd = t
 
-    def angle_diff(self, a, b):
-        return wrap_to_pi(a - b)
+    def dist_to(self, xy):
+        return math.hypot(xy[0] - self.x, xy[1] - self.y)
 
-    def dist_to_xy(self, xy):
-        if self.tb3_pose is None:
-            return 1e9
-        return math.hypot(self.tb3_pose.x - xy[0], self.tb3_pose.y - xy[1])
+    def angle_to(self, xy):
+        return wrap_to_pi(math.atan2(xy[1] - self.y, xy[0] - self.x) - self.yaw)
 
-    def unit_from_to(self, a_xy, b_xy):
-        dx = b_xy[0] - a_xy[0]
-        dy = b_xy[1] - a_xy[1]
-        d = math.hypot(dx, dy)
-        if d < 1e-6:
-            return (1.0, 0.0)
-        return (dx / d, dy / d)
-
-    def push_heading_world(self):
-        ux, uy = self.unit_from_to(self.stone_xy, self.arm_zone_center)
-        return math.atan2(uy, ux)
-
-    def behind_point(self, dist):
-        ux, uy = self.unit_from_to(self.stone_xy, self.arm_zone_center)
-        return (self.stone_xy[0] - ux * dist, self.stone_xy[1] - uy * dist)
-
-    # ---------------- LiDAR windows ----------------
-    def scan_min_in_window(self, center_rad, half_width_rad):
+    def scan_objects(self, ignore_attached=False):
         if self.scan is None:
-            return float("inf")
-        msg = self.scan
-        best = float("inf")
-        ang = msg.angle_min
-        for r in msg.ranges:
-            if math.isfinite(r) and msg.range_min < r < msg.range_max:
+            return None, float("inf"), float("inf")
+
+        front_best = None
+        left_min = float("inf")
+        right_min = float("inf")
+
+        ang = self.scan.angle_min
+        for r in self.scan.ranges:
+            if math.isfinite(r) and self.scan.range_min < r < self.scan.range_max:
                 a = wrap_to_pi(ang)
-                if abs(wrap_to_pi(a - center_rad)) <= half_width_rad:
-                    best = min(best, r)
-            ang += msg.angle_increment
+                deg = math.degrees(a)
+
+                if ignore_attached:
+                    if abs(deg) <= self.attached_ignore_front_deg and r <= self.attached_ignore_front_dist:
+                        ang += self.scan.angle_increment
+                        continue
+
+                if abs(deg) <= 35.0:
+                    if front_best is None or r < front_best[0]:
+                        front_best = (r, a)
+
+                if 20.0 <= deg <= 80.0:
+                    left_min = min(left_min, r)
+
+                if -80.0 <= deg <= -20.0:
+                    right_min = min(right_min, r)
+
+            ang += self.scan.angle_increment
+
+        return front_best, left_min, right_min
+
+    def nav_to_point(self, goal_xy, stop_dist=0.4, v_nom=0.22):
+        d = self.dist_to(goal_xy)
+        if d <= stop_dist:
+            self.stop_hard()
+            return True
+
+        err = self.angle_to(goal_xy)
+        front_obj, left_min, right_min = self.scan_objects(ignore_attached=self.attached)
+        front_r = front_obj[0] if front_obj is not None else 999.0
+
+        if front_r < 0.22:
+            turn = -self.w_fast if left_min < right_min else self.w_fast
+            self.drive(0.0, turn)
+            return False
+
+        avoid = 0.0
+        if left_min < 0.40:
+            avoid -= 0.7
+        if right_min < 0.40:
+            avoid += 0.7
+
+        w = clamp(1.3 * err + avoid, -self.w_fast, self.w_fast)
+        v = v_nom * max(0.20, 1.0 - min(abs(err) / 1.4, 0.85))
+
+        if front_r < 0.35:
+            v = min(v, 0.05)
+        elif front_r < 0.55:
+            v = min(v, 0.10)
+
+        self.drive(v, w)
+        return False
+
+    def stone_front_obj(self):
+        if self.scan is None:
+            return None
+
+        best = None
+        ang = self.scan.angle_min
+
+        for r in self.scan.ranges:
+            if math.isfinite(r) and self.scan.range_min < r < self.scan.range_max:
+                a = wrap_to_pi(ang)
+                if abs(math.degrees(a)) <= 25.0:
+                    if best is None or r < best[0]:
+                        best = (r, a)
+            ang += self.scan.angle_increment
+
         return best
 
-    def front_clear(self):
-        # برای نزدیک شدن مستقیم، فقط جلوی ربات مهمه
-        return self.scan_min_in_window(0.0, math.radians(15))
+    def make_tb3_stone_req(self):
+        req = Attach.Request()
+        req.model_name_1 = self.tb3_model
+        req.link_name_1 = self.tb3_link
+        req.model_name_2 = self.stone_model
+        req.link_name_2 = self.stone_link
+        return req
 
-    # ---------------- Avoidance ----------------
-    def compute_avoidance(self, desired_lin, desired_ang):
-        front = self.scan_min_in_window(0.0, math.radians(20))
-        left = self.scan_min_in_window(+math.radians(60), math.radians(20))
-        right = self.scan_min_in_window(-math.radians(60), math.radians(20))
+    def make_arm_stone_req(self):
+        req = Attach.Request()
+        req.model_name_1 = self.arm_model
+        req.link_name_1 = self.arm_ee_link
+        req.model_name_2 = self.stone_model
+        req.link_name_2 = self.arm_stone_link
+        return req
 
-        lin = desired_lin
-        ang = desired_ang
-
-        if front < self.stop_d:
-            lin = 0.0
-            ang = +0.9 if left > right else -0.9
-            return lin, ang
-
-        if front < self.slow_d:
-            lin = min(lin, 0.10)
-
-        side_push = 0.0
-        if left < 0.62:
-            side_push -= (0.62 - left) * 0.8
-        if right < 0.62:
-            side_push += (0.62 - right) * 0.8
-
-        ang = clamp(ang + side_push, -1.2, 1.2)
-        lin = clamp(lin, 0.0, 0.24)
-        return lin, ang
-
-    def goto_xy_avoid(self, goal_xy, stop_dist=0.6, v=0.20):
-        if self.tb3_pose is None:
-            return False
-
-        gx, gy = goal_xy
-        dx = gx - self.tb3_pose.x
-        dy = gy - self.tb3_pose.y
-        dist = math.hypot(dx, dy)
-
-        if dist < stop_dist:
-            self.stop_tb3()
-            return True
-
-        target_yaw = math.atan2(dy, dx)
-        yaw_err = self.angle_diff(target_yaw, self.tb3_pose.yaw)
-
-        desired_ang = clamp(1.2 * yaw_err, -self.w_max, self.w_max)
-        desired_lin = v * (1.0 - min(1.0, abs(yaw_err)))
-        desired_lin = max(0.07, desired_lin)
-
-        lin, ang = self.compute_avoidance(desired_lin, desired_ang)
-        self.drive_tb3(lin, ang)
-        return False
-
-    def face_yaw(self, target_yaw, tol_deg=6):
-        if self.tb3_pose is None:
-            return False
-        err = self.angle_diff(target_yaw, self.tb3_pose.yaw)
-        if abs(err) < math.radians(tol_deg):
-            self.stop_tb3()
-            return True
-        lin, ang = self.compute_avoidance(0.0, clamp(1.3 * err, -0.85, 0.85))
-        self.drive_tb3(lin, ang)
-        return False
-
-    # ---------------- stuck ----------------
-    def is_stuck_forward_only(self):
-        if self.tb3_pose is None:
-            return False
-
-        now = time.time()
-        if now - self._last_stuck_check_t < 3.0:
-            return False
-
-        if self._last_stuck_pose is None:
-            self._last_stuck_pose = (self.tb3_pose.x, self.tb3_pose.y)
-            self._last_stuck_check_t = now
-            return False
-
-        moved = math.hypot(self.tb3_pose.x - self._last_stuck_pose[0], self.tb3_pose.y - self._last_stuck_pose[1])
-        self._last_stuck_pose = (self.tb3_pose.x, self.tb3_pose.y)
-        self._last_stuck_check_t = now
-
-        cmd_forward = self._last_cmd.linear.x > 0.08
-        return cmd_forward and moved < 0.03
-
-    # ---------------- gazebo pose modify (attach/detach) ----------------
-    def gz_set_model_pose(self, model_name: str, x: float, y: float, z: float, yaw: float = 0.0):
+    def gz_set_model_pose(self, model_name, x, y, z, yaw=0.0):
         qz = math.sin(yaw / 2.0)
         qw = math.cos(yaw / 2.0)
 
-        topic = f"/gazebo/{self.world_name}/pose/modify"
-        msg = (
+        cmd = [
+            "gz", "topic",
+            "-t", "/gazebo/lab_world/pose/modify",
+            "-m", "gazebo.msgs.Pose",
+            "-p",
             f"name: '{model_name}' "
             f"position {{ x: {x} y: {y} z: {z} }} "
-            f"orientation {{ x: 0 y: 0 z: {qz} w: {qw} }}"
-        )
-        cmd = ["gz", "topic", "-t", topic, "-m", "gazebo.msgs.Pose", "-p", msg]
+            f"orientation {{ x: 0 y: 0 z: {qz} w: {qw} }}",
+        ]
+
         try:
-            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            return True
-        except Exception as e:
-            self.get_logger().error(f"gz_set_model_pose failed: {e}")
-            return False
+            subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
+        except Exception:
+            pass
 
-    def attach_update(self):
-        if not self.attached or self.tb3_pose is None:
-            return
-        x = self.tb3_pose.x + math.cos(self.tb3_pose.yaw) * self.attach_offset
-        y = self.tb3_pose.y + math.sin(self.tb3_pose.yaw) * self.attach_offset
-        self.gz_set_model_pose(self.stone_name, x, y, 0.125, yaw=0.0)
-
-    def do_attach(self):
-        self.attached = True
-        # همون لحظه سنگ رو snap کن جلوی ربات (خیلی مهم)
-        self.attach_update()
-        self.get_logger().info("STONE ATTACHED (magnetic/vacuum)")
-
-    def do_detach(self):
-        self.attached = False
-        self.get_logger().info("STONE DETACHED")
-
-    # ---------------- arm trajectory ----------------
-    def send_arm_trajectory(self):
+    def send_arm_pick_place(self):
         jt = JointTrajectory()
         jt.joint_names = [
             "lbr_iiwa_joint_1",
@@ -323,220 +297,275 @@ class ScenarioCoordinator(Node):
             p.time_from_start.sec = sec
             return p
 
-        home      = [0.0,  0.4, 0.0, -1.2, 0.0,  1.0, 0.0]
-        pre_pick  = [0.2,  0.9, 0.0, -1.7, 0.0,  1.2, 0.0]
-        lift      = [0.2,  0.3, 0.0, -1.1, 0.0,  1.0, 0.0]
-        pre_place = [-0.4, 0.7, 0.0, -1.3, 0.0,  1.1, 0.0]
-        done      = home
+        home = [0.0, 0.4, 0.0, -1.2, 0.0, 1.0, 0.0]
+        pre_pick = [0.2, 0.9, 0.0, -1.7, 0.0, 1.2, 0.0]
+        lift = [0.2, 0.3, 0.0, -1.1, 0.0, 1.0, 0.0]
+
+        pre_place = [-1.90, 1.05, 0.0, -1.25, 0.0, 1.10, 0.0]
+        place = [-1.93, 0.98, 0.0, -1.35, 0.0, 1.05, 0.0]
+
+        back_home = [0.0, 0.4, 0.0, -1.2, 0.0, 1.0, 0.0]
 
         jt.points = [
             pt(home, 2),
-            pt(pre_pick, 5),
-            pt(lift, 8),
-            pt(pre_place, 12),
-            pt(done, 15),
+            pt(pre_pick, 6),
+            pt(lift, 12),
+            pt(pre_place, 35),
+            pt(place, 48),
+            pt(back_home, 62),
         ]
+
         self.pub_traj.publish(jt)
 
-    # ---------------- recovery ----------------
-    def recovery_action(self):
+    def stuck_recovery(self):
         t = self.elapsed()
         if t < 0.8:
-            self.drive_tb3(-0.10, 0.0)
-            return
-        if t < 2.0:
-            self.drive_tb3(0.0, 0.85)
-            return
-        if t < 2.6:
-            self.drive_tb3(+0.08, 0.0)
-            return
-        self.stop_tb3()
-        self.set_state("TB3_GOTO_WAYPOINTS")
+            self.drive(-0.10, 0.0)
+        elif t < 1.8:
+            self.drive(0.0, 0.8)
+        elif t < 2.7:
+            self.drive(0.10, 0.0)
+        else:
+            self.stop_hard()
+            if self.attached:
+                self.set_state("PUSH_TO_ARM")
+            else:
+                self.set_state("STONE_SEARCH")
 
-    # ---------------- approach stone straight (key fix) ----------------
-    def approach_stone_from_behind(self):
-        """
-        فقط مستقیم از پشت به سمت سنگ برو.
-        - heading قفل روی push_heading
-        - اگر جلوی ربات خیلی نزدیک شد stop/recover
-        - وقتی dist به سنگ < 0.45 -> موفق
-        """
-        if self.tb3_pose is None:
-            return False
-
-        # قفل جهت روی push_heading (یعنی از پشت به سمت سنگ/بازو)
-        target_yaw = self.push_heading_world()
-        yaw_err = wrap_to_pi(target_yaw - self.tb3_pose.yaw)
-        ang = clamp(1.1 * yaw_err, -0.7, 0.7)
-
-        # امنیت جلو
-        front = self.front_clear()
-        if front < 0.28:
-            self.stop_tb3()
-            return False
-
-        # نزدیک شدن
-        if self.dist_to_xy(self.stone_xy) < 0.45:
-            self.stop_tb3()
-            return True
-
-        # اینجا Avoidance جانبی رو کمتر کن که از بغل فرار نکنه
-        # فقط اگر خیلی نزدیک مانع بود، کم کن
-        lin = self.v_approach
-        if front < 0.50:
-            lin = 0.08
-
-        self.drive_tb3(lin, ang)
-        return False
-
-    # ---------------- main loop ----------------
     def loop(self):
-        if self.tb3_pose is None:
+        if self.x is None or self.scan is None:
             return
-
-        self.attach_update()
-
-        if self.state in ("TB3_GOTO_WAYPOINTS", "TB3_GOTO_BEHIND_STONE", "TB3_GOTO_PRE_ATTACH", "TB3_PUSHING_TO_ARM"):
-            if self.is_stuck_forward_only():
-                self.get_logger().warn("TB3 seems stuck -> recovery")
-                self.set_state("TB3_RECOVERY")
-                return
 
         if self.state == "INIT":
-            self.attached = False
-            self.wp_idx = 0
-            self._last_stuck_pose = (self.tb3_pose.x, self.tb3_pose.y)
-            self._last_stuck_check_t = time.time()
-            self.set_state("TB3_GOTO_WAYPOINTS")
+            self.set_state("GOTO_STONE_AREA")
             return
 
-        if self.state == "TB3_RECOVERY":
-            self.recovery_action()
-            return
+        if self.state == "GOTO_STONE_AREA":
+            done = self.nav_to_point(
+                self.stone_xy,
+                stop_dist=self.goto_stone_area_dist,
+                v_nom=self.v_nav,
+            )
+            self.get_logger().info(f"STATE GOTO_STONE pose=({self.x:.2f},{self.y:.2f})")
 
-        # 0) WAYPOINTS (KEEP)
-        if self.state == "TB3_GOTO_WAYPOINTS":
-            if self.wp_idx >= len(self.waypoints):
-                self.set_state("TB3_GOTO_BEHIND_STONE")
-                return
-
-            wp = self.waypoints[self.wp_idx]
-            done = self.goto_xy_avoid(wp, stop_dist=0.55, v=self.v_go)
             if done:
-                self.wp_idx += 1
-            if self.elapsed() > 120.0:
-                self.set_state("TB3_RECOVERY")
+                self.stop_hard()
+                self.set_state("STONE_SEARCH")
             return
 
-        # 1) پشت سنگ (دورتر)
-        if self.state == "TB3_GOTO_BEHIND_STONE":
-            behind = self.behind_point(self.behind_dist)
-            done = self.goto_xy_avoid(behind, stop_dist=0.65, v=self.v_go)
+        if self.state == "STONE_SEARCH":
+            if self.elapsed() > self.search_timeout:
+                self.stop_hard()
+                self.set_state("GOTO_STONE_AREA")
+                return
+
+            obj = self.stone_front_obj()
+            if obj is None:
+                self.drive(0.0, 0.35)
+                return
+
+            self.stop_hard()
+            self.set_state("STONE_ALIGN")
+            return
+
+        if self.state == "STONE_ALIGN":
+            obj = self.stone_front_obj()
+            self.get_logger().info(f"STATE STONE_ALIGN pose=({self.x:.2f},{self.y:.2f})")
+
+            if obj is None:
+                self.set_state("STONE_SEARCH")
+                return
+
+            r, a = obj
+            a_deg = math.degrees(a)
+
+            if r <= self.attach_dist and abs(a_deg) <= self.attach_angle_deg:
+                self.stop_hard()
+                self.set_state("ATTACH_TB3")
+                return
+
+            if abs(a_deg) > 6.0:
+                self.drive(0.0, clamp(1.5 * a, -self.w_align, self.w_align))
+                return
+
+            if r > self.attach_dist:
+                self.drive(self.v_touch, clamp(0.8 * a, -0.25, 0.25))
+                return
+
+            self.set_state("ATTACH_TB3")
+            return
+
+        if self.state == "ATTACH_TB3":
+            self.stop_hard()
+
+            if self.attach_future is None:
+                if not self.cli_attach.service_is_ready():
+                    self.get_logger().warn("attach service not ready yet...")
+                    return
+
+                self.attach_future = self.cli_attach.call_async(self.make_tb3_stone_req())
+                self.req_sent_t = time.time()
+                self.get_logger().info("Attach request sent (async).")
+                return
+
+            if self.attach_future.done():
+                res = self.attach_future.result()
+                self.attach_future = None
+
+                if res is not None and res.ok:
+                    self.attached = True
+                    self.get_logger().info("TB3 ATTACH OK")
+                    self.set_state("PUSH_TO_ARM")
+                else:
+                    self.get_logger().warn("TB3 attach failed -> back to STONE_ALIGN")
+                    self.set_state("STONE_ALIGN")
+                return
+
+            if time.time() - self.req_sent_t > self.service_timeout:
+                self.get_logger().warn("attach future timeout")
+                self.attach_future = None
+                self.set_state("STONE_ALIGN")
+            return
+
+        if self.state == "PUSH_TO_ARM":
+            if self.elapsed() > self.push_timeout:
+                self.get_logger().warn("push timeout -> go detach anyway")
+                self.set_state("DETACH_TB3")
+                return
+
+            done = self.nav_to_point(
+                self.push_xy,
+                stop_dist=self.push_goal_dist,
+                v_nom=self.v_push,
+            )
+            self.get_logger().info(f"PUSH_TO_ARM pose=({self.x:.2f},{self.y:.2f})")
+
+            obj, _, _ = self.scan_objects(ignore_attached=True)
+            front_r = obj[0] if obj is not None else 999.0
+
+            if front_r < 0.18:
+                self.get_logger().warn("Front blocked during push -> small escape")
+                self.set_state("RECOVERY")
+                return
+
             if done:
-                self.set_state("TB3_GOTO_PRE_ATTACH")
-                return
-            if self.elapsed() > 90.0:
-                self.set_state("TB3_RECOVERY")
+                self.stop_hard()
+                self.set_state("DETACH_TB3")
             return
 
-        # 1.5) پشت سنگ (نزدیک‌تر) -> جلوی «از بغل رد شدن» را می‌گیرد
-        if self.state == "TB3_GOTO_PRE_ATTACH":
-            pre = self.behind_point(self.pre_attach_dist)
-            done = self.goto_xy_avoid(pre, stop_dist=0.45, v=0.16)
-            if done:
-                self.set_state("TB3_FACE_STONE_PUSH_DIR")
-                return
-            if self.elapsed() > 60.0:
-                self.set_state("TB3_RECOVERY")
-            return
+        if self.state == "DETACH_TB3":
+            self.stop_hard()
 
-        # 2) رو به جهت push
-        if self.state == "TB3_FACE_STONE_PUSH_DIR":
-            if self.face_yaw(self.push_heading_world(), tol_deg=5):
-                self.set_state("TB3_APPROACH_STONE_STRAIGHT")
-            if self.elapsed() > 35.0:
-                self.set_state("TB3_RECOVERY")
-            return
+            if self.detach_future is None:
+                if not self.cli_detach.service_is_ready():
+                    self.get_logger().warn("detach service not ready yet...")
+                    return
 
-        # 3) ✅ نزدیک شدن مستقیم از پشت تا سنگ دقیقاً جلوی ربات بیاد
-        if self.state == "TB3_APPROACH_STONE_STRAIGHT":
-            ok = self.approach_stone_from_behind()
-            if ok:
-                self.set_state("TB3_ATTACH_STONE")
-                return
-            if self.elapsed() > 35.0:
-                self.set_state("TB3_RECOVERY")
-            return
-
-        # 4) Attach قطعی
-        if self.state == "TB3_ATTACH_STONE":
-            self.do_attach()
-            self.set_state("TB3_PUSHING_TO_ARM")
-            return
-
-        # 5) بردن سنگ به سمت بازو
-        if self.state == "TB3_PUSHING_TO_ARM":
-            d_to_arm = self.dist_to_xy(self.arm_zone_center)
-            if d_to_arm < self.detach_dist_to_arm:
-                self.stop_tb3()
-                self.set_state("TB3_DETACH_NEAR_ARM")
+                self.detach_future = self.cli_detach.call_async(self.make_tb3_stone_req())
+                self.req_sent_t = time.time()
+                self.get_logger().info("Detach request sent (async).")
                 return
 
-            gx, gy = self.arm_zone_center
-            dx = gx - self.tb3_pose.x
-            dy = gy - self.tb3_pose.y
-            goal_yaw = math.atan2(dy, dx)
-            yaw_err = wrap_to_pi(goal_yaw - self.tb3_pose.yaw)
+            if self.detach_future.done():
+                res = self.detach_future.result()
+                self.detach_future = None
 
-            desired_ang = clamp(1.0 * yaw_err, -1.0, 1.0)
-            lin, ang = self.compute_avoidance(self.v_push, desired_ang)
-            self.drive_tb3(min(lin, 0.20), ang)
+                if res is not None and res.ok:
+                    self.attached = False
+                    self.get_logger().info("DETACH DONE")
+                    self.set_state("ARM_PICK_PLACE")
+                else:
+                    self.get_logger().warn("detach failed -> retry")
+                return
 
-            if self.elapsed() > 140.0:
-                self.set_state("TB3_RECOVERY")
+            if time.time() - self.req_sent_t > self.service_timeout:
+                self.get_logger().warn("detach timeout -> retry")
+                self.detach_future = None
             return
 
-        # 6) detach نزدیک بازو + شروع بازو
-        if self.state == "TB3_DETACH_NEAR_ARM":
-            px, py = self.arm_zone_center
-            self.gz_set_model_pose(self.stone_name, px, py, 0.125, yaw=0.0)
-            self.do_detach()
-            self.set_state("STONE_AT_ARM_ZONE")
-            return
+        if self.state == "ARM_PICK_PLACE":
+            self.stop()
 
-        if self.state == "STONE_AT_ARM_ZONE":
-            self.stop_tb3()
-            self.send_arm_trajectory()
-            self.set_state("ARM_WORKING")
-            return
+            if not self.arm_started:
+                self.gz_set_model_pose(self.stone_model, -1.08, -0.30, 0.04, 0.0)
+                time.sleep(1.5)
 
-        if self.state == "ARM_WORKING":
+                for _ in range(5):
+                    self.send_arm_pick_place()
+                    time.sleep(0.05)
+
+                self.arm_started = True
+                self.arm_attach_sent = False
+                self.arm_detach_sent = False
+                self.state_t0 = time.time()
+                self.get_logger().info("Arm trajectory published for REAL attach.")
+                return
+
             t = self.elapsed()
-            if 7.5 < t < 8.5:
-                self.gz_set_model_pose(self.stone_name, self.container_xy[0], self.container_xy[1], 0.30, yaw=0.0)
-            if 11.5 < t < 12.5:
-                self.gz_set_model_pose(self.stone_name, self.container_xy[0], self.container_xy[1], 0.08, yaw=0.0)
-            if t > 16.5:
-                self.set_state("ARM_DONE")
+
+            if 6.8 < t < 7.6 and not self.arm_attach_sent:
+                self.gz_set_model_pose(self.stone_model, -1.08, -0.30, 0.04, 0.0)
+                return
+
+            if t >= 7.6 and not self.arm_attach_sent:
+                if self.cli_attach.service_is_ready():
+                    time.sleep(0.5)
+                    self.cli_attach.call_async(self.make_arm_stone_req())
+                    self.arm_attach_sent = True
+                    self.get_logger().info("ARM_GRASP OK - real attach")
+                return
+
+            if t >= 56.0 and not self.arm_detach_sent:
+                if self.cli_detach.service_is_ready():
+                    time.sleep(0.5)
+                    self.cli_detach.call_async(self.make_arm_stone_req())
+                    self.arm_detach_sent = True
+                    self.get_logger().info("ARM_RELEASE OK - real detach")
+                return
+
+            if 56.2 < t < 62.0 and self.arm_detach_sent:
+                self.gz_set_model_pose(self.stone_model, -1.54015, -1.08473, 0.24, 0.0)
+                return
+
+            if t > 62.0:
+                self.set_state("RETURN_HOME")
+                return
+
+        if self.state == "RETURN_HOME":
+            done = self.nav_to_point(self.start_xy, stop_dist=0.15, v_nom=0.15)
+            if done:
+                self.stop_hard()
+                self.set_state("DONE")
             return
 
-        if self.state == "ARM_DONE":
-            self.stop_tb3()
+        if self.state == "RECOVERY":
+            self.get_logger().warn("Recovery mode")
+            self.stuck_recovery()
+            return
+
+        if self.state == "DONE":
+            self.stop()
             return
 
 
 def main():
     rclpy.init()
     node = ScenarioCoordinator()
+
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
-    node.stop_tb3()
+
+    try:
+        node.stop_hard()
+        node.stop()
+    except Exception:
+        pass
+
     node.destroy_node()
     rclpy.shutdown()
 
 
 if __name__ == "__main__":
     main()
-
