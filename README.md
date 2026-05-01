@@ -77,7 +77,7 @@ worlds/lab_world.sdf
 - KUKA LBR iiwa with ROS2 Control
 - Custom Gazebo physics interaction
 
-# -----------------------------------------------------------------------
+-------------------------------------------------------------------
 
 ### Important World Coordinates
 
@@ -110,7 +110,7 @@ worlds/lab_world.sdf
 - Stuck detection
 - Recovery behavior
 
-# --------------------------------------------------------------
+------------------------------------------------------------
 
 ## KUKA LBR iiwa
 
@@ -142,7 +142,7 @@ scenario_coordinator
 The scenario_coordinator node manages the complete autonomous mission
 using a finite state machine (FSM).
 
-# ----------------------------------------------------------------
+----------------------------------------------------------
 
 ### Core Topics
 /scenario_status
@@ -184,7 +184,7 @@ Expected Output:
 /attach
 /detach
 
-# -----------------------------------------------------------------------
+----------------------------------------------------------------
 
 ## 2. Verify ROS2 Controllers
 $ ros2 control list_controllers
@@ -193,7 +193,7 @@ Expected Output:
 joint_state_broadcaster [active]
 iiwa_arm_controller [active]
 
-# ----------------------------------------------------------------------
+-----------------------------------------------------------------
 
 ## 3. Verify TurtleBot3 LiDAR
 $ ros2 topic echo /tb3/scan
@@ -204,7 +204,7 @@ ranges: [...]
 angle_min: ...
 angle_max: ...
 
-# -------------------------------------------------------------------------
+--------------------------------------------------------------------
 
 ## 4. Verify Odometry
 $ ros2 topic echo /odom
@@ -215,8 +215,7 @@ position:
 x: ...
 y: ...
 orientation: ...
-
-# ------------------------------------------------------------------------
+-----------------------------------------------------------------
 
 ## 5. Verify Scenario Status
 $ ros2 topic echo /scenario_status
@@ -229,7 +228,7 @@ PICKING
 PLACING
 COMPLETE
 
-# ---------------------------------------------------------------------
+--------------------------------------------------------------
 
 ## 6. Send TurtleBot3 Velocity Command
 $ ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "
@@ -246,18 +245,18 @@ angular:
 Expected Behavior:
 TurtleBot3 moves forward
 
-# -------------------------------------------------------------------
+--------------------------------------------------------------
 
 ## 7. Send KUKA Joint Trajectory
 $ ros2 topic pub /iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
 joint_names:
-- A1
-- A2
-- A3
-- A4
-- A5
-- A6
-- A7
+- j1
+- j2
+- j3
+- j4
+- j5
+- j6
+- j7
 points:
 - positions: [0.0, -0.5, 0.0, -1.0, 0.0, 1.0, 0.0]
   time_from_start:
@@ -267,7 +266,7 @@ points:
 Expected Behavior:
 KUKA iiwa moves to target configuration
 
-# ----------------------------------------------------------------------
+---------------------------------------------------------------------
 
 ## 8. Attach Stone to TurtleBot3
 $ ros2 service call /attach gazebo_ros_link_attacher/srv/Attach "
@@ -279,8 +278,7 @@ link_name_2: 'stone_link'
 
 Expected Output:
 success: True
-
-# ---------------------------------------------------------------------
+--------------------------------------------------------------
 
 ## 9. Detach Stone
 $ ros2 service call /detach gazebo_ros_link_attacher/srv/Attach "
