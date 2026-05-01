@@ -332,8 +332,7 @@ The system follows a complete autonomous task sequence:
 8. KUKA iiwa places the stone into the container.
 9. TurtleBot3 returns home.
 10. Mission ends.
-
-# ------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## Finite State Machine
 
@@ -352,7 +351,7 @@ The scenario is controlled using the following states:
 
 ros2 topic echo /scenario_status
 
-# ------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 ## Control Logic
 
@@ -375,7 +374,7 @@ If the robot becomes stuck:
 
 Reverse -> Rotate -> Retry
 
-# ------------------------------------------------------------------------------
+-------------------------------------------------------------------
 
 ## Stone Alignment
 
@@ -388,7 +387,7 @@ The robot performs:
 - Slow approach
 - Hard stop before attachment
 
-# ------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 ## Arm Pick-and-Place
 
@@ -404,7 +403,7 @@ Back home
 
 The stone pose is stabilized before grasping and corrected before final placement.
 
-# ------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 ## Project Structure
 
@@ -439,7 +438,7 @@ roboticslab-technical-project/
 |
 |__ README.md
 
-# ------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ## Dependencies
 
@@ -456,7 +455,7 @@ The project was developed and tested with:
 - TurtleBot3 packages
 - Python 3
 
-# ------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 ## Build Instructions
 
