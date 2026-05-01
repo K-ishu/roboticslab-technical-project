@@ -61,189 +61,178 @@ worlds/lab_world.sdf
 (-1.3, -0.3, 0)
 
 ```
-# =========================================================
-# ROS2 + Gazebo Multi-Robot Pick & Place Scenario
-# Complete README Shell Format
+# ==============================================================================
+#                           ROS2 GAZEBO MULTI-ROBOT SYSTEM
+# ==============================================================================
 
+## Simulation Environment
 
+### Environment Includes
+- Static boundary walls
+- Obstacle box
+- Obstacle cylinder
+- Dynamic cylindrical stone
+- Placement container
+- TurtleBot3 Waffle Pi
+- KUKA LBR iiwa with ROS2 Control
+- Custom Gazebo physics interaction
 
-# =========================
-# ENVIRONMENT CONFIGURATION
-# =========================
+# ------------------------------------------------------------------------------
 
-## Container Center
+### Important World Coordinates
+
+#### Container Center
 (-1.54015, -1.08473, 0)
 
-## Obstacle Box
+#### Obstacle Box
 (1.51611, -3.24702, 0.25)
 
-## Obstacle Cylinder
+#### Obstacle Cylinder
 (2.87436, -2.43085, 0.35)
 
+# ==============================================================================
+#                                ROBOT SYSTEMS
+# ==============================================================================
 
+## TurtleBot3 Waffle Pi
 
-# =========================
-# ROBOT SYSTEMS
-# =========================
-
-# ---------------------------------------------------------
-# TurtleBot3
-# ---------------------------------------------------------
-
-## Topics
+### ROS2 Topics
 /cmd_vel
 /odom
 /tb3/scan
 
-## Features
-* Differential drive motion
-* 2D 360° LiDAR sensing
-* Sector-based obstacle avoidance
-* Stone alignment
-* Reactive navigation
-* Stuck detection
-* Recovery behavior
+### Features
+- Differential drive motion
+- 2D 360° LiDAR sensing
+- Sector-based obstacle avoidance
+- Stone alignment
+- Reactive navigation
+- Stuck detection
+- Recovery behavior
 
+# ------------------------------------------------------------------------------
 
-# ---------------------------------------------------------
-# KUKA LBR iiwa
-# ---------------------------------------------------------
+## KUKA LBR iiwa
 
-## Controller Topic
+### Controller Topic
 /iiwa_arm_controller/joint_trajectory
 
-## Active Controllers
+### Active Controllers
 joint_state_broadcaster
 iiwa_arm_controller
 
-## End-Effector
+### End-Effector / Tool Link
 lbr_iiwa_tool
 
-## Features
-* 7-DOF serial manipulator
-* ROS2 Control integration
-* Joint trajectory execution
-* Simulated grasping using Gazebo link attachment
-* Pick-and-place operation
+### Features
+- 7-DOF serial manipulator
+- ROS2 Control integration
+- Joint trajectory execution
+- Simulated grasping via Gazebo link attachment
+- Pick-and-place operation
 
-
-
-# =========================
-# SYSTEM ARCHITECTURE
-# =========================
+# ==============================================================================
+#                             SYSTEM ARCHITECTURE
+# ==============================================================================
 
 ## Main Coordinator Node
 scenario_coordinator
 
-## Description
-The scenario_coordinator node controls the full mission
+### Description
+The scenario_coordinator node manages the complete autonomous mission
 using a finite state machine (FSM).
 
-## Core Topics
+# ------------------------------------------------------------------------------
+
+### Core Topics
 /scenario_status
 /tb3/scan
 /odom
 /cmd_vel
 /iiwa_arm_controller/joint_trajectory
 
-## Services
+### Services
 /attach
 /detach
 
-## Service Type
+### Service Type
 gazebo_ros_link_attacher/Attach
 
-
--------------------------------------------------------------------------
-# GAZEBO LINK ATTACHER
-
+# ==============================================================================
+#                           GAZEBO LINK ATTACHER
+# ==============================================================================
 
 ## Purpose
-Used to simulate robotic grasping and object transport
-between TurtleBot3, KUKA iiwa, and the stone.
+Used to simulate robotic grasping and object transport between robots and stone.
 
-## Attach Examples
+### Attach Examples
 
-# TurtleBot3 transports stone
+#### TurtleBot3 transporting stone
 tb3::base_link  <->  stone::stone_link
 
-# KUKA iiwa grasps stone
+#### KUKA iiwa grasping stone
 lbr_iiwa::lbr_iiwa_tool  <->  stone::stone_link
 
+# ==============================================================================
+#                           VERIFICATION COMMANDS
+# ==============================================================================
 
+## 1. Verify Gazebo Link Attacher
+$ ros2 service list | grep attach
 
-# =========================
-# VERIFICATION COMMANDS
-# =========================
-
-# ---------------------------------------------------------
-# 1. Check Gazebo Link Attacher Services
-# ---------------------------------------------------------
-ros2 service list | grep attach
-
-# Expected Output:
+Expected Output:
 /attach
 /detach
 
+# ------------------------------------------------------------------------------
 
+## 2. Verify ROS2 Controllers
+$ ros2 control list_controllers
 
-# ---------------------------------------------------------
-# 2. Check ROS2 Controllers
-# ---------------------------------------------------------
-ros2 control list_controllers
-
-# Expected Output:
+Expected Output:
 joint_state_broadcaster [active]
 iiwa_arm_controller [active]
 
+# ------------------------------------------------------------------------------
 
+## 3. Verify TurtleBot3 LiDAR
+$ ros2 topic echo /tb3/scan
 
-# ---------------------------------------------------------
-# 3. Check TurtleBot3 LiDAR Data
-# ---------------------------------------------------------
-ros2 topic echo /tb3/scan
+Expected Output:
+sensor_msgs/msg/LaserScan
+ranges: [...]
+angle_min: ...
+angle_max: ...
 
-# Expected Output:
-# sensor_msgs/msg/LaserScan data stream
-# ranges: [...]
-# angle_min: ...
-# angle_max: ...
+# ------------------------------------------------------------------------------
 
+## 4. Verify Odometry
+$ ros2 topic echo /odom
 
+Expected Output:
+nav_msgs/msg/Odometry
+position:
+x: ...
+y: ...
+orientation: ...
 
-# ---------------------------------------------------------
-# 4. Check Odometry
-# ---------------------------------------------------------
-ros2 topic echo /odom
+# ------------------------------------------------------------------------------
 
-# Expected Output:
-# nav_msgs/msg/Odometry
-# position:
-# x: ...
-# y: ...
-# orientation: ...
+## 5. Verify Scenario Status
+$ ros2 topic echo /scenario_status
 
+Expected Output Example:
+SEARCHING_STONE
+ALIGNING
+TRANSPORTING
+PICKING
+PLACING
+COMPLETE
 
+# ------------------------------------------------------------------------------
 
-# ---------------------------------------------------------
-# 5. Check Scenario State
-# ---------------------------------------------------------
-ros2 topic echo /scenario_status
-
-# Expected Output Example:
-# SEARCHING_STONE
-# ALIGNING
-# TRANSPORTING
-# PICKING
-# PLACING
-# COMPLETE
-
-
-
-# ---------------------------------------------------------
-# 6. Send TurtleBot3 Velocity Command
-# ---------------------------------------------------------
-ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "
+## 6. Send TurtleBot3 Velocity Command
+$ ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "
 linear:
   x: 0.2
   y: 0.0
@@ -254,15 +243,13 @@ angular:
   z: 0.0
 "
 
-# Expected Behavior:
-# TurtleBot3 moves forward
+Expected Behavior:
+TurtleBot3 moves forward
 
+# ------------------------------------------------------------------------------
 
-
-# ---------------------------------------------------------
-# 7. Send KUKA Joint Trajectory
-# ---------------------------------------------------------
-ros2 topic pub /iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
+## 7. Send KUKA Joint Trajectory
+$ ros2 topic pub /iiwa_arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "
 joint_names:
 - A1
 - A2
@@ -277,44 +264,38 @@ points:
     sec: 3
 "
 
-# Expected Behavior:
-# KUKA iiwa moves to target joint configuration
+Expected Behavior:
+KUKA iiwa moves to target configuration
 
+# ------------------------------------------------------------------------------
 
-
-# ---------------------------------------------------------
-# 8. Attach Stone to TurtleBot3
-# ---------------------------------------------------------
-ros2 service call /attach gazebo_ros_link_attacher/srv/Attach "
+## 8. Attach Stone to TurtleBot3
+$ ros2 service call /attach gazebo_ros_link_attacher/srv/Attach "
 model_name_1: 'tb3'
 link_name_1: 'base_link'
 model_name_2: 'stone'
 link_name_2: 'stone_link'
 "
 
-# Expected Output:
-# success: True
+Expected Output:
+success: True
 
+# ------------------------------------------------------------------------------
 
-
-# ---------------------------------------------------------
-# 9. Detach Stone
-# ---------------------------------------------------------
-ros2 service call /detach gazebo_ros_link_attacher/srv/Attach "
+## 9. Detach Stone
+$ ros2 service call /detach gazebo_ros_link_attacher/srv/Attach "
 model_name_1: 'tb3'
 link_name_1: 'base_link'
 model_name_2: 'stone'
 link_name_2: 'stone_link'
 "
 
-# Expected Output:
-# success: True
+Expected Output:
+success: True
 
-
-
-# =========================
-# COMPLETE MISSION FLOW
-# =========================
+# ==============================================================================
+#                             COMPLETE MISSION FLOW
+# ==============================================================================
 
 1. TurtleBot3 scans environment
 2. Detects stone using LiDAR
@@ -322,22 +303,20 @@ link_name_2: 'stone_link'
 4. Attaches stone
 5. Navigates to KUKA workspace
 6. KUKA grasps stone
-7. TurtleBot detaches
-8. KUKA places stone in container
+7. TurtleBot3 detaches
+8. KUKA places stone into container
 9. Mission complete
 
+# ==============================================================================
+#                               PROJECT HIGHLIGHTS
+# ==============================================================================
 
-
-# =========================
-# PROJECT HIGHLIGHTS
-# =========================
-
-* Multi-robot coordination
-* ROS2 + Gazebo integration
-* Finite State Machine mission logic
-* Autonomous navigation
-* Obstacle avoidance
-* Simulated manipulation
-* Mobile manipulation pipeline
-* Full pick-and-place scenario
+- Multi-robot coordination
+- ROS2 + Gazebo integration
+- Autonomous mobile manipulation
+- Finite State Machine control
+- Sector-based obstacle avoidance
+- Simulated grasping
+- Pick-and-place pipeline
+- Full mission autonomy
 
