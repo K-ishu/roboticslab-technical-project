@@ -39,23 +39,6 @@ The goal of this project is to demonstrate an autonomous industrial-style cooper
 ```bash
 worlds/lab_world.sdf
 
---------------------------------------------------------------------------------------------------------------------------
+```
 
-### Environment Includes
 
-- Static boundary walls  
-- Obstacle box  
-- Obstacle cylinder  
-- Dynamic cylindrical stone  
-- Placement container  
-- TurtleBot3 Waffle Pi  
-- KUKA LBR iiwa with ROS2 Control  
-- Custom Gazebo physics interaction  
-
----
-
-### Important World Coordinates
-
-#### Arm Base
-```txt id="rdff5u"
-(-1.3, -0.3, 0)
