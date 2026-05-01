@@ -61,9 +61,9 @@ worlds/lab_world.sdf
 (-1.3, -0.3, 0)
 
 ```
-# ==============================================================================
-#                           ROS2 GAZEBO MULTI-ROBOT SYSTEM
-# ==============================================================================
+
+#  ROS2 GAZEBO MULTI-ROBOT SYSTEM
+
 
 ## Simulation Environment
 
@@ -90,9 +90,9 @@ worlds/lab_world.sdf
 #### Obstacle Cylinder
 (2.87436, -2.43085, 0.35)
 
-# ==============================================================================
-#                                ROBOT SYSTEMS
-# ==============================================================================
+-----------------------------------------------------------------------------------------------
+#ROBOT SYSTEMS
+
 
 ## TurtleBot3 Waffle Pi
 
@@ -131,9 +131,9 @@ lbr_iiwa_tool
 - Simulated grasping via Gazebo link attachment
 - Pick-and-place operation
 
-# ==============================================================================
-#                             SYSTEM ARCHITECTURE
-# ==============================================================================
+
+#SYSTEM ARCHITECTURE
+
 
 ## Main Coordinator Node
 scenario_coordinator
@@ -158,9 +158,9 @@ using a finite state machine (FSM).
 ### Service Type
 gazebo_ros_link_attacher/Attach
 
-# ==============================================================================
-#                           GAZEBO LINK ATTACHER
-# ==============================================================================
+--------------------------------------------------------------------------------
+#GAZEBO LINK ATTACHER
+--------------------------------------------------------------------------------
 
 ## Purpose
 Used to simulate robotic grasping and object transport between robots and stone.
@@ -173,9 +173,9 @@ tb3::base_link  <->  stone::stone_link
 #### KUKA iiwa grasping stone
 lbr_iiwa::lbr_iiwa_tool  <->  stone::stone_link
 
-# ==============================================================================
-#                           VERIFICATION COMMANDS
-# ==============================================================================
+
+#VERIFICATION COMMANDS
+
 
 ## 1. Verify Gazebo Link Attacher
 $ ros2 service list | grep attach
@@ -293,9 +293,9 @@ link_name_2: 'stone_link'
 Expected Output:
 success: True
 
-# ==============================================================================
-#                             COMPLETE MISSION FLOW
-# ==============================================================================
+
+#COMPLETE MISSION FLOW
+
 
 1. TurtleBot3 scans environment
 2. Detects stone using LiDAR
@@ -307,9 +307,9 @@ success: True
 8. KUKA places stone into container
 9. Mission complete
 
-# ==============================================================================
-#                               PROJECT HIGHLIGHTS
-# ==============================================================================
+
+#PROJECT HIGHLIGHTS
+
 
 - Multi-robot coordination
 - ROS2 + Gazebo integration
