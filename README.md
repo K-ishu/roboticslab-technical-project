@@ -39,6 +39,8 @@ The goal of this project is to demonstrate an autonomous industrial-style cooper
 ```bash
 worlds/lab_world.sdf
 
+--------------------------------------------------------------------------------------------------------------------------
+
 ### Environment Includes
 
 - Static boundary walls  
